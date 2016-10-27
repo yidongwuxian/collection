@@ -13,13 +13,12 @@
     <link href="css/collection.css" rel="stylesheet"/>
 </head>
 <body style="background:#f8f8f8">
-
 	<div class="searchbar">
 	    <div class="mui-search-bar" id="searchBar">
 	        <form class="mui-search-bar-form">
 	            <div class="mui-search-bar-box">
 	                <i class="mui-icon mui-icon-search"></i>
-	                <input type="search" class="mui-search-bar-input" id="searchInput" placeholder="关键字" required/>
+	                <input type="search" class="mui-search-bar-input" id="searchInput" placeholder="输入关键字" required/>
 	                <a href="javascript:" class="mui-icon mui-icon-clear" id="searchClear"></a>
 	            </div>
 	            <label class="mui-search-bar-label" id="searchText">
@@ -27,7 +26,7 @@
 	                <span>搜索</span>
 	            </label>
 	        </form>
-	        <a href="javascript:;" class="mui-search-bar-cancel-btn" id="searchCancel">搜索</a>
+	        <a href="javascript:;" class="mui-search-bar-cancel-btn" id="searchBtn">搜索</a>
 	    </div>
 	</div>
 	<div class="mui-content" style="position:relative;">
@@ -42,7 +41,13 @@
 			<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone smarkLnk'></a>
 			<a class='mui-btn mui-btn-grey mui-icon mui-icon-person smarkLnk'></a>
 	    </div>
-	    <div class="nodata"></div>
+	    <div class="loadingPic">
+            <i class="loading"></i>
+            <span class="loadmore__tips">正在加载</span>
+        </div>
+	    <div class="nodata loadmore_line">
+	    	<span class="loadmore__tips">暂无数据</span>
+	    </div>
 	</div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/mui.min.js"></script>
@@ -53,11 +58,11 @@ $(function(){
 	    $searchText   = $('#searchText'),
         $searchInput  = $('#searchInput'),
         $searchClear  = $('#searchClear'),
-        $searchCancel = $('#searchCancel'),
-        $smarkBox     = $('.smarkBox');
-        
-    var winH = $(window).height(); //页面可视区域高度  
-    var page = 1;
+        $searchBtn = $('#searchBtn'),
+        $smarkBox     = $('.smarkBox'),
+    	winH          = $(window).height(), 
+    	page          = 1,
+    	gPageSize     = 4;
 	    
 	 	function hideSearchResult(){
 	 		$searchResult.hide();
@@ -78,84 +83,102 @@ $(function(){
         })
 
         $searchClear.on('click', function(){
+        	$smarkBox.hide();
             hideSearchResult();
             $searchInput.focus();
         });
         
-        $(window).scroll(function(){  
-    		var pageH = $(document.body).height();  
-        	var scrollT = $(window).scrollTop(); //滚动条top  
-        	var aa = (pageH - winH - scrollT) / winH; 
-        });
         
-          $searchCancel.on('click', function(){
-          		 $searchResult.show();
-	        	 var xhr = null;
-			     if(xhr){
-			         xhr.abort();
-			     }
-        		 if ( $searchInput.val() != "" ) {  
-                       xhr = $.ajax({
-			                type: 'GET',
-			                url: 'json/tag.json',
-			                cache:false,
-			                data: "keyword=" + $searchInput.val(),
-			                dataType: 'json',
-			                success: function (json) {
-			                    if (json) {
-			                    	var newJson = json.aaData;
-			                        var	lists = "<ul class='mui-table-view'>";
-			                        $.each(newJson, function (i,item) {
-			                          	lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
-			                            		"<div class='mui-slider-handle'>" +
-			                            			"<p><span>合同编号:</span>" +
-			                            			"<span class='mui-color-primary'>"+ item.contractNum +"</span></p>" +
-			                            			"<p><span>客户编号:</span>" +
-			                            			"<span class='mui-color-success'>"+ item.customerNum +"</span></p>" +
-			                            			"<p><span>客户名称:</span>" +
-			                            			"<span class='mui-color-warning'>"+ item.customerName +"</span></p>" +
-			                            			"<p><span>产品类型:</span>" +
-			                            			"<span class='mui-color-royal'>"+ item.productName +"</span></p>" +
-			                            		"</div>" +
-			                             "</li>";
-			                        });
-			                        lists +="</ul>";
-			                        $('#searchResult').html(lists);	
-			                        if($('#searchResult li').length != '0'){
-						    			popupSmartBox();
-						    		}
-			                    }else{
-			                    	$(".nodata").show().html("别滚动了，已经到底了。。。");  
-                                	//return false; 
-			                    }
-			                }
-			            });
-                        
-                        
-                    }  
-        	
+        function iScrollFn(){
+        	$(window).scroll(function(){  
+    			var pageH = $(document.body).height();  
+        		var scrollT = $(window).scrollTop(); 
+        		var diffY = (pageH - winH - scrollT) / winH;
+				if (diffY < 0.02) {  
+					dataAjax(page);
+				}
+				//滚动，隐藏操作按钮层
+				$smarkBox.hide();
         	});
+        }
+
+		iScrollFn();
+        
+        $searchBtn.on('click', function(){
+      		 $searchResult.show();
+        	 var xhr = null;
+		     if(xhr){
+		        xhr.abort();
+		     }
+    		 if( $searchInput.val() != "" ) {  
+                dataAjax(1);       
+             }  
+        });
         	
-        	var mScrollTop = $(document).scrollTop();
-        	var pageH = $(document.body).height();  
-        	var scrollT = $(window).scrollTop(); //滚动条top  
-        	var boxH  = $('.smarkBox').outerHeight();
-        	var aa = (pageH - winH - scrollT) / winH; 
+        function dataAjax(pagenumber){
+        	$.ajax({
+                type: 'GET',
+                url: 'json/tag.json',
+                cache:false,
+                data: "keyword=" + $searchInput.val()+"&pagesize="+ gPageSize +"&pagenumber="+ pagenumber,
+                dataType: 'json',
+                success: function (json){
+                	$(".loadingPic").hide();
+                    if (json.length != 0) {
+                    	var newJson = json.aaData;
+                        var	lists = "<ul class='mui-table-view'>";
+                        $.each(newJson, function (i,item) {
+                          	lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
+                            		"<div class='mui-slider-handle'>" +
+                            			"<p><span>合同编号:</span>" +
+                            			"<span class='mui-color-primary'>"+ item.contractNum +"</span></p>" +
+                            			"<p><span>客户编号:</span>" +
+                            			"<span class='mui-color-success'>"+ item.customerNum +"</span></p>" +
+                            			"<p><span>客户名称:</span>" +
+                            			"<span class='mui-color-warning'>"+ item.customerName +"</span></p>" +
+                            			"<p><span>产品类型:</span>" +
+                            			"<span class='mui-color-royal'>"+ item.productName +"</span></p>" +
+                            		"</div>" +
+                             "</li>";
+                        });
+                        lists +="</ul>";
+                        $('#searchResult').html(lists);	
+                        page++;
+                        if($('#searchResult li').length != '0'){
+			    			popupSmartBox();
+			    		}
+                    }else{
+                    	$('.nodata').show();
+                    	return false;
+                    }
+                },
+                beforeSend: function(){
+                	$(".loadingPic").show();
+                },
+                error: function(){
+                	$(".loadingPic").hide();
+                }
+            });
+        }
         	
-        	console.log(pageH);
+        	
+//      	var mScrollTop = $(document).scrollTop();
+//      	var pageH = $(document.body).height();  
+//      	var scrollT = $(window).scrollTop(); //滚动条top  
+//      	var boxH  = $('.smarkBox').outerHeight();
+//      	var aa = (pageH - winH - scrollT) / winH; 
+        	
         	//点击其中li,弹出相应操作按钮
     		function popupSmartBox(){
     			$('#searchResult li').click(function(e){
     				var dataId = $(this).attr("data-id");
-    				$(this).parents().parents().find('.mui-icon').attr('href','http://www.baidu.com?id='+dataId+'');	  	
+    				$(this).parents().parents().find('.smarkLnk').attr('href','index.html?id='+dataId+'');	  	
     				$(this).parents().parents().find('.smarkBox').show();
     			});
     			
     		}
-    		//滚动，隐藏操作按钮层
-    		$(document).scroll(function() {
-    			$smarkBox.hide();
-    		})
+    		
+    		
     
     
 //            if($searchInput.val() != ""){

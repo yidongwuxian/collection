@@ -52,7 +52,7 @@
                  </div>
 		         <div class="mui-cell-bd">
                      <select class="mui-select" id="collectionModes" name="collectionModes">
-                         <option value="">请选择</option>
+                         <option value="0">请选择</option>
                          <option value="1">电话催收</option>
                          <option value="2">约谈催收</option>
                          <option value="3">信函催收</option>
@@ -87,7 +87,7 @@
                      </div>
     		         <div class="mui-cell-bd">
                          <select class="mui-select" id="collectionResult" name="collectionResult">
-                             <option value="">请选择</option>
+                             <option value="0">请选择</option>
                              <option value="1">拒绝还款</option>
                              <option value="2">拖延还款</option>
                              <option value="3">约定计划还款</option>
@@ -109,7 +109,7 @@
                      </div>
     		         <div class="mui-cell-bd">
                          <select class="mui-select" id="collectionTypes" name="collectionTypes">
-                             <option value="">请选择</option>
+                             <option value="0">请选择</option>
                              <option value="1">借款人</option>
                              <option value="2">担保人</option>
                              <option value="3">家人</option>
@@ -288,16 +288,16 @@ $(function(){
             };
             
             // 判断手机号码
-			if($('#collectionModes').find('option').val() == "" ){
+			if($('#collectionModes').find('option:checked').val() == "0" ){
 				mui.alert('催收形式请至少选择一项');
 				return false;
 			}
 			
-			else if($('#collectionResult').find('option').val() == "" ){
+			else if($('#collectionResult').find('option:checked').val() == "0" ){
 				mui.alert('催收结果请至少选择一项');
 				return false;
 			}
-			else if($('#collectionTypes').find('option').val() == "" ){
+			else if($('#collectionTypes').find('option:checked').val() == "0" ){
 				mui.alert('催收对象种类请至少选择一项');
 				return false;
 			}

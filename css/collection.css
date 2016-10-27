@@ -1,3 +1,4 @@
+.mui-content{ background-color: #f8f8f8 !important;}
 .mui-input-group .mui-input-row{ display: flex; }
 .mui-input-group .mui-button-row{ padding:0 !important; }
 .mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{ top:0 !important; }
@@ -20,7 +21,6 @@
 .mui-table-view-cell>.mui-slider-left, .mui-table-view-cell>.mui-slider-right{ height:25% !important; }
 .mui-table-view-cell>.mui-slider-left>.mui-btn, .mui-table-view-cell>.mui-slider-right>.mui-btn{ padding:0 10px !important; margin-left:5px;}
 .mui-slider-handle span:first-child{ margin-right: 10px;}
-.nodata{ display: none; }
 /*popup Box*/
 .smarkBox{ display: none; position: fixed; width: 40px; height:258px; top:15%; bottom:20%; right: 0; }
 .smarkBox .mui-btn.mui-icon{margin:5px 0;}
