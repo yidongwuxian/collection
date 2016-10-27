@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/mui-extend.css" rel="stylesheet"/>
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+<!--    <link href="css/dropload.css" rel="stylesheet"/>-->
+    <link href="css/collection.css" rel="stylesheet"/>
+</head>
+<body style="background:#f8f8f8">
+<div class="mui-content">
+	<div class="searchbar">
+	    <div class="mui-search-bar" id="searchBar">
+	        <form class="mui-search-bar-form">
+	            <div class="mui-search-bar-box">
+	                <i class="mui-icon mui-icon-search"></i>
+	                <input type="search" class="mui-search-bar-input" id="searchInput" placeholder="关键字" required/>
+	                <a href="javascript:" class="mui-icon mui-icon-clear" id="searchClear"></a>
+	            </div>
+	            <label class="mui-search-bar-label" id="searchText">
+	                <i class="mui-icon mui-icon-search"></i>
+	                <span>搜索</span>
+	            </label>
+	        </form>
+	        <a href="javascript:;" class="mui-search-bar-cancel-btn" id="searchCancel">搜索</a>
+	    </div>
+	</div>
+	<div class="searchbar-result" id="searchResult">
+		
+	</div>
+    <div class="nodata"></div>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/mui.min.js"></script>
+<!--<script src="js/dropload.min.js"></script>-->
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	var $searchBar    = $('#searchBar'),
+	    $searchResult = $('#searchResult'),
+	    $searchText   = $('#searchText'),
+        $searchInput  = $('#searchInput'),
+        $searchClear  = $('#searchClear'),
+        $searchCancel = $('#searchCancel');
+        
+    var winH = $(window).height(); //页面可视区域高度  
+    var page = 1;
+	    
+	 	function hideSearchResult(){
+	 		$searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('mui-search-bar-focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('mui-search-bar-focusing');
+            $searchInput.focus();
+        });
+        $searchInput.on('blur', function () {
+            if(!this.value.length) cancelSearch();
+        })
+
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        
+        $(window).scroll(function(){  
+        		var pageH = $(document.body).height();  
+            	var scrollT = $(window).scrollTop(); //滚动条top  
+            	var aa = (pageH - winH - scrollT) / winH; 
+        });
+        
+          $searchCancel.on('click', function(){
+          		 $searchResult.show();
+	        	 var xhr = null;
+			     if(xhr){
+			         xhr.abort();
+			     }
+        		 if ( $searchInput.val() != "" ) {  
+                       xhr = $.ajax({
+			                type: 'GET',
+			                url: 'json/tag.json',
+			                cache:false,
+			                data: "keyword=" + $searchInput.val(),
+			                dataType: 'json',
+			                success: function (json) {
+			                    if (json) {
+			                    	var newJson = json.aaData;
+			                        var	lists = "<ul class='mui-table-view'>";
+			                        $.each(newJson, function (i,item) {
+			                          	lists += "<li class='mui-table-view-cell'>" +
+			                              		"<div class='mui-slider-right mui-disabled'>" +
+									"<a class='mui-btn mui-btn-red mui-icon mui-icon-email' href='index.html?id="+item.id+"'></a>" +
+									"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
+									"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
+									"<a class='mui-btn mui-btn-red mui-icon mui-icon-email'></a>" +
+									"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
+									"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
+									"</div>"   +
+			                            		"<div class='mui-slider-handle'>" +
+			                            			"<p><span>合同编号:</span>" +
+			                            			"<span class='mui-color-primary'>"+ item.contractNum +"</span></p>" +
+			                            			"<p><span>客户编号:</span>" +
+			                            			"<span class='mui-color-success'>"+ item.customerNum +"</span></p>" +
+			                            			"<p><span>客户名称:</span>" +
+			                            			"<span class='mui-color-warning'>"+ item.customerName +"</span></p>" +
+			                            			"<p><span>产品类型:</span>" +
+			                            			"<span class='mui-color-royal'>"+ item.productName +"</span></p>" +
+			                            		"</div>" +
+			                             "</li>";    
+			                        });
+			                        lists +="</ul>";
+			                        $('#searchResult').html(lists);	
+			                    }else{
+			                    	$(".nodata").show().html("别滚动了，已经到底了。。。");  
+                                	//return false; 
+			                    }
+			                }
+			            });
+                        
+                        
+                    }  
+        	
+        	});
+        	
+        	
+    
+    		
+    
+    
+//            if($searchInput.val() != ""){
+//			            xhr=$.ajax({
+//			                type: 'GET',
+//			                url: 'json/tag.json',
+//			                cache:false,
+//			                data: "keyword=" + $searchInput.val(),
+//			                dataType: 'json',
+//			                success: function (json) {
+//			                    if (json.length != 0) {
+//			                    	var newJson = json.aaData;
+//			                        var lists = "<ul class='mui-table-view'>";
+//			                        $.each(newJson, function (i,item) {
+//			                            lists += "<li class='mui-table-view-cell'>"+
+//			                            	    "<div class='mui-slider-right mui-disabled'>" +
+//									"<a class='mui-btn mui-btn-red mui-icon mui-icon-email' href='index.html?id="+item.id+"'></a>" +
+//									"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
+//									"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
+//									"<a class='mui-btn mui-btn-red mui-icon mui-icon-email'></a>" +
+//									"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
+//									"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
+//									"</div>" 
+//			                            		+"<div class='mui-slider-handle'>"+
+//			                            			"<p><span>合同编号:</span>"+
+//			                            			"<span class='mui-color-primary'>"+ item.contractNum +"</span></p>"+
+//			                            			"<p><span>客户编号:</span>"+
+//			                            			"<span class='mui-color-success'>"+ item.customerNum +"</span></p>"+
+//			                            			"<p><span>客户名称:</span>"+
+//			                            			"<span class='mui-color-warning'>"+ item.customerName +"</span></p>"+
+//			                            			"<p><span>产品类型:</span>"+
+//			                            			"<span class='mui-color-royal'>"+ item.productName +"</span></p>"+
+//			                            		"</div>"+
+//			                            	  "</li>";
+//			                            	
+//			                        });
+//									$searchResult.html(lists);
+//			                    } 
+//			                }
+//			            });
+//		            
+//          } 
+//      });
+        
+//	    var xhr=null;
+//      $('#keyword').keyup(function() {
+//            if(xhr){
+//                xhr.abort();
+//            }
+//          var inputText= this.value;
+//
+//          if(inputText!=""){
+//	            xhr=$.ajax({
+//	                type: 'GET',
+//	                url: 'json/tag.json',
+//	                cache:false,
+//	                data: "keyword=" + inputText,
+//	                dataType: 'json',
+//	                success: function (json) {
+//	                    if (json.length != 0) {
+//	                    	var newJson = json.aaData;
+//	                        var lists = "<ul class='mui-table-view'>";
+//	                        $.each(newJson, function (i,item) {
+//	                            lists += "<li class='mui-table-view-cell'>"+
+//	                            	    "<div class='mui-slider-right mui-disabled'>" +
+//							"<a class='mui-btn mui-btn-red mui-icon mui-icon-email' href='index.html?id="+item.id+"'></a>" +
+//							"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
+//							"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
+//							"<a class='mui-btn mui-btn-red mui-icon mui-icon-email'></a>" +
+//							"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
+//							"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
+//							"</div>" 
+//	                            		+"<div class='mui-slider-handle'>"+
+//	                            			"<p><span>合同编号</span>"+
+//	                            			"<span>"+ item.contractNum +"</span></p>"+
+//	                            			"<p><span>客户编号</span>"+
+//	                            			"<span>"+ item.customerNum +"</span></p>"+
+//	                            			"<p><span>客户名称</span>"+
+//	                            			"<span>"+ item.customerName +"</span></p>"+
+//	                            			"<p><span>产品类型</span>"+
+//	                            			"<span>"+ item.productName +"</span></p>"+
+//	                            		"</div>"+
+//	                            	  "</li>";
+//	                            	
+//	                        });
+//	                        lists+="</ul>";
+//	
+//	                        $("#searchBox").html(lists).show();	
+//	                    } else {
+//	                        $("#searchBox").hide();
+//	                    }
+//	                }
+//	            });
+//          }else{
+//              $("#searchBox").hide();
+//          }
+//      }); 
+
+           
+    	 
+})
+</script>
+</body>
+</html>
