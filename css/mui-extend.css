@@ -4,6 +4,7 @@
 .mui-color-warning{ color:#f0ad4e; }
 .mui-color-royal{ color:#8a6de9; }
 .mui-color-danger{ color:#dd524d; }
+.mui-color-blue{ color:#77BAFF; }
 /*search box*/
 .mui-search-bar {
   position: relative;
@@ -141,10 +142,14 @@
   display: none;
   margin-left: 10px;
   line-height: 28px;
-  color: #09BB07;
+  color: #77BAFF;
   white-space: nowrap;
   font-size:14px !important;
 }
+.mui-search-bar-cancel-btn:active{
+	color: #77BAFF !important;
+}
+
 .mui-search-bar-input:not(:valid) ~ .mui-icon-clear {
   display: none;
 }
@@ -210,8 +215,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .loadingPic .loadmore__tips {
     display: inline-block;
     vertical-align: middle;
+    color:#999;
 }  
-/*暂无数据*/
+/*没有更多数据了*/
 .nodata{
 	  display:none;
 	  width: 65%;
@@ -232,6 +238,6 @@ input[type="search"]::-webkit-search-results-decoration {
 	  position: relative;
     top: -0.9em;
     padding: 0 .55em;
-    background-color: #F8F8F8;
+    background-color: #efeff4;
     color: #999999;
 }

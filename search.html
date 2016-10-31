@@ -12,7 +12,7 @@
     <link href="css/mui.picker.min.css" rel="stylesheet" />
     <link href="css/collection.css" rel="stylesheet"/>
 </head>
-<body style="background:#f8f8f8">
+<body >
 	<div class="searchbar">
 	    <div class="mui-search-bar" id="searchBar">
 	        <form class="mui-search-bar-form">
@@ -46,7 +46,7 @@
             <span class="loadmore__tips">正在加载</span>
         </div>
 	    <div class="nodata loadmore_line">
-	    	<span class="loadmore__tips">暂无数据</span>
+	    	<span class="loadmore__tips">没有更多数据了</span>
 	    </div>
 	</div>
 <script src="js/jquery-1.8.3.min.js"></script>
@@ -58,8 +58,9 @@ $(function(){
 	    $searchText   = $('#searchText'),
         $searchInput  = $('#searchInput'),
         $searchClear  = $('#searchClear'),
-        $searchBtn = $('#searchBtn'),
+        $searchBtn    = $('#searchBtn'),
         $smarkBox     = $('.smarkBox'),
+        $nodata       = $('.nodata'),
     	winH          = $(window).height(), 
     	page          = 1,
     	gPageSize     = 4;
@@ -84,6 +85,7 @@ $(function(){
 
         $searchClear.on('click', function(){
         	$smarkBox.hide();
+        	$nodata.hide();
             hideSearchResult();
             $searchInput.focus();
         });
@@ -94,8 +96,13 @@ $(function(){
     			var pageH = $(document.body).height();  
         		var scrollT = $(window).scrollTop(); 
         		var diffY = (pageH - winH - scrollT) / winH;
-				if (diffY < 0.02) {  
+				if (diffY < 0.02) {
 					dataAjax(page);
+				}
+				if(scrollT > 50){
+					$('.searchbar').css('position','fixed');
+				}else{
+					$('.searchbar').css('position','relative');
 				}
 				//滚动，隐藏操作按钮层
 				$smarkBox.hide();
@@ -106,16 +113,12 @@ $(function(){
         
         $searchBtn.on('click', function(){
       		 $searchResult.show();
-        	 var xhr = null;
-		     if(xhr){
-		        xhr.abort();
-		     }
     		 if( $searchInput.val() != "" ) {  
                 dataAjax(1);       
              }  
         });
         	
-        function dataAjax(pagenumber){
+        function dataAjax(pagenumber){     	
         	$.ajax({
                 type: 'GET',
                 url: 'json/tag.json',
@@ -124,20 +127,21 @@ $(function(){
                 dataType: 'json',
                 success: function (json){
                 	$(".loadingPic").hide();
-                    if (json.length != 0) {
+                    if (json && (gPageSize * pagenumber) < json.iTotalRecords) {
+                    	$(".loadingPic").show();
                     	var newJson = json.aaData;
                         var	lists = "<ul class='mui-table-view'>";
                         $.each(newJson, function (i,item) {
                           	lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
                             		"<div class='mui-slider-handle'>" +
-                            			"<p><span>合同编号:</span>" +
-                            			"<span class='mui-color-primary'>"+ item.contractNum +"</span></p>" +
-                            			"<p><span>客户编号:</span>" +
-                            			"<span class='mui-color-success'>"+ item.customerNum +"</span></p>" +
-                            			"<p><span>客户名称:</span>" +
-                            			"<span class='mui-color-warning'>"+ item.customerName +"</span></p>" +
-                            			"<p><span>产品类型:</span>" +
-                            			"<span class='mui-color-royal'>"+ item.productName +"</span></p>" +
+                            			"<p><span class='mui-color-blue'>合同编号:</span>" +
+                            			"<span>"+ item.contractNum +"</span></p>" +
+                            			"<p><span class='mui-color-blue'>客户编号:</span>" +
+                            			"<span>"+ item.customerNum +"</span></p>" +
+                            			"<p><span class='mui-color-blue'>客户名称:</span>" +
+                            			"<span>"+ item.customerName +"</span></p>" +
+                            			"<p><span class='mui-color-blue'>产品类型:</span>" +
+                            			"<span>"+ item.productName +"</span></p>" +
                             		"</div>" +
                              "</li>";
                         });
@@ -148,6 +152,7 @@ $(function(){
 			    			popupSmartBox();
 			    		}
                     }else{
+                    	$(".loadingPic").hide();
                     	$('.nodata').show();
                     	return false;
                     }
@@ -161,124 +166,28 @@ $(function(){
             });
         }
         	
+       	function hideLoadingPic(){
+       		$(".loadingPic").hide();
+       		if($(".loadingPic").is(":visible") ==false){
+       			showNodata();
+       		}
+       		
+       	}
+       	
+       	function showNodata(){
+       		$('.nodata').show();
+       	}
         	
-//      	var mScrollTop = $(document).scrollTop();
-//      	var pageH = $(document.body).height();  
-//      	var scrollT = $(window).scrollTop(); //滚动条top  
-//      	var boxH  = $('.smarkBox').outerHeight();
-//      	var aa = (pageH - winH - scrollT) / winH; 
-        	
-        	//点击其中li,弹出相应操作按钮
-    		function popupSmartBox(){
-    			$('#searchResult li').click(function(e){
-    				var dataId = $(this).attr("data-id");
-    				$(this).parents().parents().find('.smarkLnk').attr('href','index.html?id='+dataId+'');	  	
-    				$(this).parents().parents().find('.smarkBox').show();
-    			});
-    			
-    		}
-    		
-    		
-    
-    
-//            if($searchInput.val() != ""){
-//			            xhr=$.ajax({
-//			                type: 'GET',
-//			                url: 'json/tag.json',
-//			                cache:false,
-//			                data: "keyword=" + $searchInput.val(),
-//			                dataType: 'json',
-//			                success: function (json) {
-//			                    if (json.length != 0) {
-//			                    	var newJson = json.aaData;
-//			                        var lists = "<ul class='mui-table-view'>";
-//			                        $.each(newJson, function (i,item) {
-//			                            lists += "<li class='mui-table-view-cell'>"+
-//			                            	    "<div class='mui-slider-right mui-disabled'>" +
-//									"<a class='mui-btn mui-btn-red mui-icon mui-icon-email' href='index.html?id="+item.id+"'></a>" +
-//									"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
-//									"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
-//									"<a class='mui-btn mui-btn-red mui-icon mui-icon-email'></a>" +
-//									"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
-//									"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
-//									"</div>" 
-//			                            		+"<div class='mui-slider-handle'>"+
-//			                            			"<p><span>合同编号:</span>"+
-//			                            			"<span class='mui-color-primary'>"+ item.contractNum +"</span></p>"+
-//			                            			"<p><span>客户编号:</span>"+
-//			                            			"<span class='mui-color-success'>"+ item.customerNum +"</span></p>"+
-//			                            			"<p><span>客户名称:</span>"+
-//			                            			"<span class='mui-color-warning'>"+ item.customerName +"</span></p>"+
-//			                            			"<p><span>产品类型:</span>"+
-//			                            			"<span class='mui-color-royal'>"+ item.productName +"</span></p>"+
-//			                            		"</div>"+
-//			                            	  "</li>";
-//			                            	
-//			                        });
-//									$searchResult.html(lists);
-//			                    } 
-//			                }
-//			            });
-//		            
-//          } 
-//      });
-        
-//	    var xhr=null;
-//      $('#keyword').keyup(function() {
-//            if(xhr){
-//                xhr.abort();
-//            }
-//          var inputText= this.value;
-//
-//          if(inputText!=""){
-//	            xhr=$.ajax({
-//	                type: 'GET',
-//	                url: 'json/tag.json',
-//	                cache:false,
-//	                data: "keyword=" + inputText,
-//	                dataType: 'json',
-//	                success: function (json) {
-//	                    if (json.length != 0) {
-//	                    	var newJson = json.aaData;
-//	                        var lists = "<ul class='mui-table-view'>";
-//	                        $.each(newJson, function (i,item) {
-//	                            lists += "<li class='mui-table-view-cell'>"+
-//	                            	    "<div class='mui-slider-right mui-disabled'>" +
-//							"<a class='mui-btn mui-btn-red mui-icon mui-icon-email' href='index.html?id="+item.id+"'></a>" +
-//							"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
-//							"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
-//							"<a class='mui-btn mui-btn-red mui-icon mui-icon-email'></a>" +
-//							"<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone'></a>" +
-//							"<a class='mui-btn mui-btn-grey mui-icon mui-icon-person'></a>" +
-//							"</div>" 
-//	                            		+"<div class='mui-slider-handle'>"+
-//	                            			"<p><span>合同编号</span>"+
-//	                            			"<span>"+ item.contractNum +"</span></p>"+
-//	                            			"<p><span>客户编号</span>"+
-//	                            			"<span>"+ item.customerNum +"</span></p>"+
-//	                            			"<p><span>客户名称</span>"+
-//	                            			"<span>"+ item.customerName +"</span></p>"+
-//	                            			"<p><span>产品类型</span>"+
-//	                            			"<span>"+ item.productName +"</span></p>"+
-//	                            		"</div>"+
-//	                            	  "</li>";
-//	                            	
-//	                        });
-//	                        lists+="</ul>";
-//	
-//	                        $("#searchBox").html(lists).show();	
-//	                    } else {
-//	                        $("#searchBox").hide();
-//	                    }
-//	                }
-//	            });
-//          }else{
-//              $("#searchBox").hide();
-//          }
-//      }); 
-
-           
-    	 
+    	//点击其中li,弹出相应操作按钮
+		function popupSmartBox(){
+			$('#searchResult li').click(function(e){
+				$(this).css('backgroundColor','#ffffff').siblings().css('backgroundColor','#f8f8f8');
+				var dataId = $(this).attr("data-id");
+				$(this).parents().parents().find('.smarkLnk').attr('href','index.html?id='+dataId+'');	  	
+				$(this).parents().parents().find('.smarkBox').show();
+			});
+		}
+    			 
 })
 </script>
 </body>

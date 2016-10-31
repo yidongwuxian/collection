@@ -1,4 +1,3 @@
-.mui-content{ background-color: #f8f8f8 !important;}
 .mui-input-group .mui-input-row{ display: flex; }
 .mui-input-group .mui-button-row{ padding:0 !important; }
 .mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{ top:0 !important; }
@@ -15,6 +14,11 @@
 .mui-cell-bd input{ border:none !important; padding: 10px 15px 10px 5px !important; }
 .mui-test.hidden{ display: none; }
 .mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{ padding-left:15px !important; }
+#searchResult .mui-table-view li{ background-color: #f8f8f8; }
+#searchResult .mui-table-view li.mui-slider-handle{ background-color: #f8f8f8;}
+.mui-btn.mui-icon{ line-height: 1 !important; }
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit]{ padding:4px 8px !important; }
+.searchbar{ top:0; left:0; right:0; height:44px; z-index:9999; }
 /*search*/
 .mui-badge{ margin:5px; }
 .mui-table-view-cell>.mui-slider-left>.mui-btn:after,.mui-table-view-cell>.mui-slider-right>.mui-btn:after{width:0% !important;}
@@ -22,5 +26,5 @@
 .mui-table-view-cell>.mui-slider-left>.mui-btn, .mui-table-view-cell>.mui-slider-right>.mui-btn{ padding:0 10px !important; margin-left:5px;}
 .mui-slider-handle span:first-child{ margin-right: 10px;}
 /*popup Box*/
-.smarkBox{ display: none; position: fixed; width: 40px; height:258px; top:15%; bottom:20%; right: 0; }
-.smarkBox .mui-btn.mui-icon{margin:5px 0;}
+.smarkBox{ display: none; position: fixed; width: 40px; height:258px; top:20%; bottom:20%; right: 0; }
+.smarkBox .mui-btn.mui-icon{margin:8px 0;}
