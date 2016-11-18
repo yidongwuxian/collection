@@ -172,6 +172,10 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 0;
     font-size: 14px;
 }
+/*dialog*/
+.hideZbox{ display: none; width:320px; position:fixed; top:50%; left:50%;  -webkit-transition-duration: 400ms; transition-duration: 400ms; -webkit-transform: translate3d(-50%,-50%,0) scale(1); transform: translate3d(-50%,-50%,0) scale(1);  background: rgba(255,255,255,.95); z-index: 10000;}
+.hideZbox .in{ position:relative; }
+.treeMask{ display: none;  position:fixed; top:0; bottom:0; left:0; right:0; background:rgba(0,0,0,.4);     -webkit-transition-duration: 400ms; transition-duration: 400ms; z-index: 998; }
 /*loadmore*/
 .loadingPic{
 	  display: none;

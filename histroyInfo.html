@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>催收历史信息</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet"/>
+    <link href="css/collection.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="mui-content">
+	<input type="hidden" class="urlId" value="" />
+	<div class="searchbar-result" id="searchResult">
+	</div> 
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.getUrlParam = function(name){
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r!=null) return unescape(r[2]); return null;
+	}
+})(jQuery);
+$(function(){
+	$('.urlId').val($.getUrlParam('id'));
+	var urlId = $('.urlId').val();
+
+	$.ajax({
+        type: 'GET',
+        url: 'json/info.json',
+        cache:false,
+        dataType: 'json',
+        success: function (data){ 	
+            if (data) {
+            	var newJson = data.aaData;
+            	var	lists = "<ul class='mui-table-view'>";
+                        $.each(newJson, function (i,item) {
+                        	var collectionType = item.collectionType;
+                        	switch (collectionType) {
+				                case '1':  collectionType = '电话催收';break;
+				        		case '2':  collectionType = '约谈催收';break;
+				        		case '3':  collectionType = '信函催收';break;
+				            }
+                        	
+                          	lists += "<li class='mui-table-view-cell'>" +
+                            		"<div class='mui-slider-handle'>" +
+                            			"<p><span class='mui-color-blue'>催收方式:</span>" +
+                            			"<span class='tfr'>"+ collectionType +"</span></p>" +
+                            			"<p><span class='mui-color-blue'>催收时间:</span>" +
+                            			"<span class='tfr'>"+ item.collectionDate +"</span></p>" +
+                            			"<p><span class='mui-color-blue'>催收对象名称:</span>" +
+                            			"<span class='tfr'>"+ item.collector +"</span></p>" +
+                            		"</div>" +
+                             "</li>";
+                        });
+                        lists +="</ul>";
+                        $('#searchResult').html(lists);	
+            }
+        },
+        error: function(){
+        	mui.alert('请求错误','消息提示', '确定', function(){
+               hideLoading();
+            });
+        }
+    });
+    
+   
+    
+});
+</script>
+</body>
+</html>

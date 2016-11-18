@@ -1,0 +1,4586 @@
+[
+    {
+        "operation": null,
+        "industryTypeCd": "100000",
+        "industryTypeName": "农、林、牧、渔业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000000",
+        "industryTypeName": "金融业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000100",
+        "industryTypeName": "银行业",
+        "parentIndustryTypeCd": "1000000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000110",
+        "industryTypeName": "中央银行",
+        "parentIndustryTypeCd": "1000100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000120",
+        "industryTypeName": "商业银行",
+        "parentIndustryTypeCd": "1000100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000130",
+        "industryTypeName": "其他银行",
+        "parentIndustryTypeCd": "1000100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000200",
+        "industryTypeName": "证券业",
+        "parentIndustryTypeCd": "1000000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000210",
+        "industryTypeName": "证券市场管理",
+        "parentIndustryTypeCd": "1000200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000220",
+        "industryTypeName": "证券经纪与交易",
+        "parentIndustryTypeCd": "1000200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000230",
+        "industryTypeName": "证券投资",
+        "parentIndustryTypeCd": "1000200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000240",
+        "industryTypeName": "证券分析与咨询",
+        "parentIndustryTypeCd": "1000200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000300",
+        "industryTypeName": "保险业",
+        "parentIndustryTypeCd": "1000000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000310",
+        "industryTypeName": "人寿保险",
+        "parentIndustryTypeCd": "1000300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000320",
+        "industryTypeName": "非人寿保险",
+        "parentIndustryTypeCd": "1000300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000330",
+        "industryTypeName": "保险辅助服务",
+        "parentIndustryTypeCd": "1000300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000400",
+        "industryTypeName": "其他金融活动",
+        "parentIndustryTypeCd": "1000000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000410",
+        "industryTypeName": "金融信托与管理",
+        "parentIndustryTypeCd": "1000400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000420",
+        "industryTypeName": "金融租赁",
+        "parentIndustryTypeCd": "1000400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000430",
+        "industryTypeName": "财务公司",
+        "parentIndustryTypeCd": "1000400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000440",
+        "industryTypeName": "邮政储蓄",
+        "parentIndustryTypeCd": "1000400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000450",
+        "industryTypeName": "典当",
+        "parentIndustryTypeCd": "1000400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1000460",
+        "industryTypeName": "其他未列明的金融活动",
+        "parentIndustryTypeCd": "1000400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100100",
+        "industryTypeName": "农业",
+        "parentIndustryTypeCd": "100000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100110",
+        "industryTypeName": "谷物及其他作物的种植",
+        "parentIndustryTypeCd": "100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100111",
+        "industryTypeName": "谷物的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100112",
+        "industryTypeName": "薯类的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100113",
+        "industryTypeName": "油料的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100114",
+        "industryTypeName": "豆类的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100115",
+        "industryTypeName": "棉花的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100116",
+        "industryTypeName": "麻类的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100117",
+        "industryTypeName": "糖料的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100118",
+        "industryTypeName": "烟草的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100119",
+        "industryTypeName": "其他作物的种植",
+        "parentIndustryTypeCd": "100110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100120",
+        "industryTypeName": "蔬菜、园艺作物的种植",
+        "parentIndustryTypeCd": "100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100121",
+        "industryTypeName": "蔬菜的种植",
+        "parentIndustryTypeCd": "100120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100122",
+        "industryTypeName": "花卉的种植",
+        "parentIndustryTypeCd": "100120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100123",
+        "industryTypeName": "其他园艺作物的种植",
+        "parentIndustryTypeCd": "100120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100130",
+        "industryTypeName": "水果、坚果、饮料和香料作物的种植",
+        "parentIndustryTypeCd": "100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100131",
+        "industryTypeName": "水果、坚果的种植",
+        "parentIndustryTypeCd": "100130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100132",
+        "industryTypeName": "茶及其他饮料作物的种植",
+        "parentIndustryTypeCd": "100130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100133",
+        "industryTypeName": "香料作物的种植",
+        "parentIndustryTypeCd": "100130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100140",
+        "industryTypeName": "中药材的种植",
+        "parentIndustryTypeCd": "100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100200",
+        "industryTypeName": "林业",
+        "parentIndustryTypeCd": "100000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100210",
+        "industryTypeName": "林木的培育和种植",
+        "parentIndustryTypeCd": "100200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100211",
+        "industryTypeName": "育种和育苗",
+        "parentIndustryTypeCd": "100210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100212",
+        "industryTypeName": "造林",
+        "parentIndustryTypeCd": "100210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100213",
+        "industryTypeName": "林木的抚育和管理",
+        "parentIndustryTypeCd": "100210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100220",
+        "industryTypeName": "木材和竹材的采运",
+        "parentIndustryTypeCd": "100200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100221",
+        "industryTypeName": "木材的采运",
+        "parentIndustryTypeCd": "100220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100222",
+        "industryTypeName": "竹材的采运",
+        "parentIndustryTypeCd": "100220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100230",
+        "industryTypeName": "木材和竹材的采运",
+        "parentIndustryTypeCd": "100200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100300",
+        "industryTypeName": "畜牧业",
+        "parentIndustryTypeCd": "100000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100310",
+        "industryTypeName": "牲畜的饲养",
+        "parentIndustryTypeCd": "100300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100320",
+        "industryTypeName": "猪的饲养",
+        "parentIndustryTypeCd": "100300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100330",
+        "industryTypeName": "家禽的饲养",
+        "parentIndustryTypeCd": "100300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100340",
+        "industryTypeName": "狩猎和捕捉动物",
+        "parentIndustryTypeCd": "100300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100350",
+        "industryTypeName": "其他畜牧业",
+        "parentIndustryTypeCd": "100300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100400",
+        "industryTypeName": "渔业",
+        "parentIndustryTypeCd": "100000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100410",
+        "industryTypeName": "海洋渔业",
+        "parentIndustryTypeCd": "100400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100411",
+        "industryTypeName": "海水养殖",
+        "parentIndustryTypeCd": "100410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100412",
+        "industryTypeName": "海洋捕捞",
+        "parentIndustryTypeCd": "100410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100420",
+        "industryTypeName": "内陆渔业",
+        "parentIndustryTypeCd": "100400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100421",
+        "industryTypeName": "内陆养殖",
+        "parentIndustryTypeCd": "100420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100422",
+        "industryTypeName": "内陆捕捞",
+        "parentIndustryTypeCd": "100420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100500",
+        "industryTypeName": "农、林、牧、渔服务业",
+        "parentIndustryTypeCd": "100000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100510",
+        "industryTypeName": "农业服务业",
+        "parentIndustryTypeCd": "100500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100511",
+        "industryTypeName": "灌溉服务",
+        "parentIndustryTypeCd": "100510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100512",
+        "industryTypeName": "农产品初加工服务",
+        "parentIndustryTypeCd": "100510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100513",
+        "industryTypeName": "其他农业服务",
+        "parentIndustryTypeCd": "100510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100520",
+        "industryTypeName": "林业服务业",
+        "parentIndustryTypeCd": "100500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100530",
+        "industryTypeName": "畜牧服务业",
+        "parentIndustryTypeCd": "100500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100531",
+        "industryTypeName": "兽医服务",
+        "parentIndustryTypeCd": "100530"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100532",
+        "industryTypeName": "其他畜牧服务",
+        "parentIndustryTypeCd": "100530"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "100540",
+        "industryTypeName": "渔业服务业",
+        "parentIndustryTypeCd": "100500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1100000",
+        "industryTypeName": "房地产业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1100100",
+        "industryTypeName": "房地产业",
+        "parentIndustryTypeCd": "1100000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1100110",
+        "industryTypeName": "房地产开发经营",
+        "parentIndustryTypeCd": "1100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1100120",
+        "industryTypeName": "物业管理",
+        "parentIndustryTypeCd": "1100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1100130",
+        "industryTypeName": "房地产中介服务",
+        "parentIndustryTypeCd": "1100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1100140",
+        "industryTypeName": "其他房地产活动",
+        "parentIndustryTypeCd": "1100100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200000",
+        "industryTypeName": "租赁和商务服务业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200100",
+        "industryTypeName": "租赁业",
+        "parentIndustryTypeCd": "1200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200110",
+        "industryTypeName": "机械设备租赁",
+        "parentIndustryTypeCd": "1200100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200111",
+        "industryTypeName": "汽车租赁",
+        "parentIndustryTypeCd": "1200110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200112",
+        "industryTypeName": "农业机械租赁",
+        "parentIndustryTypeCd": "1200110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200113",
+        "industryTypeName": "建筑工程机械与设备租赁",
+        "parentIndustryTypeCd": "1200110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200114",
+        "industryTypeName": "计算机及通讯设备租赁",
+        "parentIndustryTypeCd": "1200110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200115",
+        "industryTypeName": "其他机械与设备租赁",
+        "parentIndustryTypeCd": "1200110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200120",
+        "industryTypeName": "文化及日用品出租",
+        "parentIndustryTypeCd": "1200100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200121",
+        "industryTypeName": "图书及音像制品出租",
+        "parentIndustryTypeCd": "1200120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200122",
+        "industryTypeName": "其他文化及日用品出租",
+        "parentIndustryTypeCd": "1200120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200200",
+        "industryTypeName": "商务服务业",
+        "parentIndustryTypeCd": "1200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200210",
+        "industryTypeName": "企业管理服务",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200211",
+        "industryTypeName": "企业管理机构",
+        "parentIndustryTypeCd": "1200210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200212",
+        "industryTypeName": "投资与资产管理",
+        "parentIndustryTypeCd": "1200210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200213",
+        "industryTypeName": "其他企业管理服务",
+        "parentIndustryTypeCd": "1200210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200220",
+        "industryTypeName": "法律服务",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200221",
+        "industryTypeName": "律师及相关的法律服务",
+        "parentIndustryTypeCd": "1200220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200222",
+        "industryTypeName": "公证服务",
+        "parentIndustryTypeCd": "1200220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200223",
+        "industryTypeName": "其他法律服务",
+        "parentIndustryTypeCd": "1200220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200230",
+        "industryTypeName": "咨询与调查",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200231",
+        "industryTypeName": "会计、审计及税务服务",
+        "parentIndustryTypeCd": "1200230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200232",
+        "industryTypeName": "市场调查",
+        "parentIndustryTypeCd": "1200230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200233",
+        "industryTypeName": "社会经济咨询",
+        "parentIndustryTypeCd": "1200230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200234",
+        "industryTypeName": "其他专业咨询",
+        "parentIndustryTypeCd": "1200230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200240",
+        "industryTypeName": "广告业",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200250",
+        "industryTypeName": "知识产权服务",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200260",
+        "industryTypeName": "职业中介服务",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200270",
+        "industryTypeName": "市场管理",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200280",
+        "industryTypeName": "旅行社",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200290",
+        "industryTypeName": "其他商务服务",
+        "parentIndustryTypeCd": "1200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200291",
+        "industryTypeName": "会议及展览服务",
+        "parentIndustryTypeCd": "1200290"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200292",
+        "industryTypeName": "包装服务",
+        "parentIndustryTypeCd": "1200290"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200293",
+        "industryTypeName": "保安服务",
+        "parentIndustryTypeCd": "1200290"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200294",
+        "industryTypeName": "办公服务",
+        "parentIndustryTypeCd": "1200290"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1200295",
+        "industryTypeName": "其他未列明的商务服务",
+        "parentIndustryTypeCd": "1200290"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300000",
+        "industryTypeName": "科学研究、技术服务和地质勘查业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300100",
+        "industryTypeName": "研究与试验发展",
+        "parentIndustryTypeCd": "1300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300110",
+        "industryTypeName": "自然科学研究与试验发展",
+        "parentIndustryTypeCd": "1300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300120",
+        "industryTypeName": "工程和技术研究与试验发展",
+        "parentIndustryTypeCd": "1300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300130",
+        "industryTypeName": "农业科学研究与试验发展",
+        "parentIndustryTypeCd": "1300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300140",
+        "industryTypeName": "医学研究与试验发展",
+        "parentIndustryTypeCd": "1300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300150",
+        "industryTypeName": "社会人文科学研究与试验发展",
+        "parentIndustryTypeCd": "1300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300200",
+        "industryTypeName": "专业技术服务业",
+        "parentIndustryTypeCd": "1300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300210",
+        "industryTypeName": "气象服务",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300220",
+        "industryTypeName": "地震服务",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300230",
+        "industryTypeName": "海洋服务",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300240",
+        "industryTypeName": "测绘服务",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300250",
+        "industryTypeName": "技术检测",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300260",
+        "industryTypeName": "环境监测",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300270",
+        "industryTypeName": "工程技术与规划管理",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300271",
+        "industryTypeName": "工程管理服务",
+        "parentIndustryTypeCd": "1300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300272",
+        "industryTypeName": "工程勘察设计",
+        "parentIndustryTypeCd": "1300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300273",
+        "industryTypeName": "规划管理",
+        "parentIndustryTypeCd": "1300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300280",
+        "industryTypeName": "其他专业技术服务",
+        "parentIndustryTypeCd": "1300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300300",
+        "industryTypeName": "科技交流和推广服务业",
+        "parentIndustryTypeCd": "1300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300310",
+        "industryTypeName": "技术推广服务",
+        "parentIndustryTypeCd": "1300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300320",
+        "industryTypeName": "科技中介服务",
+        "parentIndustryTypeCd": "1300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300330",
+        "industryTypeName": "其他科技服务",
+        "parentIndustryTypeCd": "1300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300400",
+        "industryTypeName": "地质勘查业",
+        "parentIndustryTypeCd": "1300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300410",
+        "industryTypeName": "矿产地质勘查",
+        "parentIndustryTypeCd": "1300400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300411",
+        "industryTypeName": "能源矿产地质勘查",
+        "parentIndustryTypeCd": "1300410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300412",
+        "industryTypeName": "固体矿产地质勘查",
+        "parentIndustryTypeCd": "1300410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300413",
+        "industryTypeName": "其他矿产地质勘查",
+        "parentIndustryTypeCd": "1300410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300420",
+        "industryTypeName": "基础地质勘查",
+        "parentIndustryTypeCd": "1300400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1300430",
+        "industryTypeName": "地质勘查技术服务",
+        "parentIndustryTypeCd": "1300400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400000",
+        "industryTypeName": "水利、环境和公共设施管理业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400100",
+        "industryTypeName": "水利管理业",
+        "parentIndustryTypeCd": "1400000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400110",
+        "industryTypeName": "防洪管理",
+        "parentIndustryTypeCd": "1400100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400120",
+        "industryTypeName": "水资源管理",
+        "parentIndustryTypeCd": "1400100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400121",
+        "industryTypeName": "水库管理",
+        "parentIndustryTypeCd": "1400120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400122",
+        "industryTypeName": "调水、引水管理",
+        "parentIndustryTypeCd": "1400120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400123",
+        "industryTypeName": "其他水资源管理",
+        "parentIndustryTypeCd": "1400120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400130",
+        "industryTypeName": "其他水利管理",
+        "parentIndustryTypeCd": "1400100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400200",
+        "industryTypeName": "环境管理业",
+        "parentIndustryTypeCd": "1400000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400210",
+        "industryTypeName": "自然保护",
+        "parentIndustryTypeCd": "1400200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400211",
+        "industryTypeName": "自然保护区管理",
+        "parentIndustryTypeCd": "1400210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400212",
+        "industryTypeName": "野生动植物保护",
+        "parentIndustryTypeCd": "1400210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400213",
+        "industryTypeName": "其他自然保护",
+        "parentIndustryTypeCd": "1400210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400220",
+        "industryTypeName": "环境治理",
+        "parentIndustryTypeCd": "1400200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400221",
+        "industryTypeName": "城市市容管理",
+        "parentIndustryTypeCd": "1400220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400222",
+        "industryTypeName": "城市环境卫生管理",
+        "parentIndustryTypeCd": "1400220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400223",
+        "industryTypeName": "水污染治理",
+        "parentIndustryTypeCd": "1400220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400224",
+        "industryTypeName": "危险废物治理",
+        "parentIndustryTypeCd": "1400220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400225",
+        "industryTypeName": "其他环境治理",
+        "parentIndustryTypeCd": "1400220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400300",
+        "industryTypeName": "公共设施管理业",
+        "parentIndustryTypeCd": "1400000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400310",
+        "industryTypeName": "市政公共设施管理",
+        "parentIndustryTypeCd": "1400300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400320",
+        "industryTypeName": "城市绿化管理",
+        "parentIndustryTypeCd": "1400300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1400330",
+        "industryTypeName": "游览景区管理",
+        "parentIndustryTypeCd": "1400300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600100",
+        "industryTypeName": "教育",
+        "parentIndustryTypeCd": "1600000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600110",
+        "industryTypeName": "学前教育",
+        "parentIndustryTypeCd": "1600100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600120",
+        "industryTypeName": "初等教育",
+        "parentIndustryTypeCd": "1600100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600130",
+        "industryTypeName": "中等教育",
+        "parentIndustryTypeCd": "1600100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600131",
+        "industryTypeName": "初中教育",
+        "parentIndustryTypeCd": "1600130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600132",
+        "industryTypeName": "高中教育",
+        "parentIndustryTypeCd": "1600130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600133",
+        "industryTypeName": "中等专业教育",
+        "parentIndustryTypeCd": "1600130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600134",
+        "industryTypeName": "职业中学教育",
+        "parentIndustryTypeCd": "1600130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600135",
+        "industryTypeName": "技工学校教育",
+        "parentIndustryTypeCd": "1600130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600136",
+        "industryTypeName": "其他中等教育",
+        "parentIndustryTypeCd": "1600130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600140",
+        "industryTypeName": "高等教育",
+        "parentIndustryTypeCd": "1600100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600141",
+        "industryTypeName": "普通高等教育",
+        "parentIndustryTypeCd": "1600140"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600142",
+        "industryTypeName": "成人高等教育",
+        "parentIndustryTypeCd": "1600140"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600150",
+        "industryTypeName": "其他教育",
+        "parentIndustryTypeCd": "1600100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600151",
+        "industryTypeName": "职业技能培训",
+        "parentIndustryTypeCd": "1600150"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600152",
+        "industryTypeName": "特殊教育",
+        "parentIndustryTypeCd": "1600150"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1600153",
+        "industryTypeName": "其他未列明的教育",
+        "parentIndustryTypeCd": "1600150"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700000",
+        "industryTypeName": "卫生、社会保障和社会福利业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700100",
+        "industryTypeName": "卫生",
+        "parentIndustryTypeCd": "1700000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700110",
+        "industryTypeName": "医院",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700111",
+        "industryTypeName": "综合医院",
+        "parentIndustryTypeCd": "1700110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700112",
+        "industryTypeName": "中医医院",
+        "parentIndustryTypeCd": "1700110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700113",
+        "industryTypeName": "中西医结合医院",
+        "parentIndustryTypeCd": "1700110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700114",
+        "industryTypeName": "民族医院",
+        "parentIndustryTypeCd": "1700110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700115",
+        "industryTypeName": "专科医院",
+        "parentIndustryTypeCd": "1700110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700116",
+        "industryTypeName": "疗养院",
+        "parentIndustryTypeCd": "1700110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700120",
+        "industryTypeName": "卫生院及社区医疗活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700130",
+        "industryTypeName": "门诊部医疗活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700140",
+        "industryTypeName": "计划生育技术服务活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700150",
+        "industryTypeName": "妇幼保健活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700160",
+        "industryTypeName": "专科疾病防治活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700170",
+        "industryTypeName": "疾病预防控制及防疫活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700180",
+        "industryTypeName": "其他卫生活动",
+        "parentIndustryTypeCd": "1700100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700200",
+        "industryTypeName": "社会保障业",
+        "parentIndustryTypeCd": "1700000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700210",
+        "industryTypeName": "社会保障业",
+        "parentIndustryTypeCd": "1700200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700300",
+        "industryTypeName": "社会福利业",
+        "parentIndustryTypeCd": "1700000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700310",
+        "industryTypeName": "提供住宿的社会福利",
+        "parentIndustryTypeCd": "1700300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700311",
+        "industryTypeName": "干部休养所",
+        "parentIndustryTypeCd": "1700310"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700312",
+        "industryTypeName": "收养收容服务",
+        "parentIndustryTypeCd": "1700310"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1700320",
+        "industryTypeName": "不提供住宿的社会福利",
+        "parentIndustryTypeCd": "1700300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800000",
+        "industryTypeName": "文化、体育和娱乐业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800100",
+        "industryTypeName": "新闻出版业",
+        "parentIndustryTypeCd": "1800000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800120",
+        "industryTypeName": "新闻业",
+        "parentIndustryTypeCd": "1800100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800130",
+        "industryTypeName": "出版业",
+        "parentIndustryTypeCd": "1800100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800131",
+        "industryTypeName": "图书出版",
+        "parentIndustryTypeCd": "1800130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800132",
+        "industryTypeName": "报纸出版",
+        "parentIndustryTypeCd": "1800130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800133",
+        "industryTypeName": "期刊出版",
+        "parentIndustryTypeCd": "1800130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800134",
+        "industryTypeName": "音像制品出版",
+        "parentIndustryTypeCd": "1800130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800135",
+        "industryTypeName": "电子出版物出版",
+        "parentIndustryTypeCd": "1800130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800136",
+        "industryTypeName": "其他出版",
+        "parentIndustryTypeCd": "1800130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800200",
+        "industryTypeName": "广播、电视、电影和音像业",
+        "parentIndustryTypeCd": "1800000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800210",
+        "industryTypeName": "广播",
+        "parentIndustryTypeCd": "1800200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800220",
+        "industryTypeName": "电视",
+        "parentIndustryTypeCd": "1800200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800230",
+        "industryTypeName": "电影",
+        "parentIndustryTypeCd": "1800200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800231",
+        "industryTypeName": "电影制作与发行",
+        "parentIndustryTypeCd": "1800230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800232",
+        "industryTypeName": "电影放映",
+        "parentIndustryTypeCd": "1800230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800240",
+        "industryTypeName": "音像制作",
+        "parentIndustryTypeCd": "1800200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800300",
+        "industryTypeName": "文化艺术业",
+        "parentIndustryTypeCd": "1800000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800310",
+        "industryTypeName": "文艺创作与表演",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800320",
+        "industryTypeName": "艺术表演场馆",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800330",
+        "industryTypeName": "图书馆与档案馆",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800331",
+        "industryTypeName": "图书馆",
+        "parentIndustryTypeCd": "1800330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800332",
+        "industryTypeName": "档案馆",
+        "parentIndustryTypeCd": "1800330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800340",
+        "industryTypeName": "文物及文化保护",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800350",
+        "industryTypeName": "博物馆",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800360",
+        "industryTypeName": "烈士陵园、纪念馆",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800370",
+        "industryTypeName": "群众文化活动",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800380",
+        "industryTypeName": "文化艺术经纪代理",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800390",
+        "industryTypeName": "其他文化艺术",
+        "parentIndustryTypeCd": "1800300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800400",
+        "industryTypeName": "体育",
+        "parentIndustryTypeCd": "1800000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800410",
+        "industryTypeName": "体育组织",
+        "parentIndustryTypeCd": "1800400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800420",
+        "industryTypeName": "体育场馆",
+        "parentIndustryTypeCd": "1800400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800430",
+        "industryTypeName": "其他体育",
+        "parentIndustryTypeCd": "1800400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800500",
+        "industryTypeName": "娱乐业",
+        "parentIndustryTypeCd": "1800000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800510",
+        "industryTypeName": "室内娱乐活动",
+        "parentIndustryTypeCd": "1800500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800520",
+        "industryTypeName": "游乐园",
+        "parentIndustryTypeCd": "1800500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800530",
+        "industryTypeName": "休闲健身娱乐活动",
+        "parentIndustryTypeCd": "1800500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1800540",
+        "industryTypeName": "其他娱乐活动",
+        "parentIndustryTypeCd": "1800500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900000",
+        "industryTypeName": "公共管理和社会组织",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900100",
+        "industryTypeName": "中国共产党机关",
+        "parentIndustryTypeCd": "1900000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900110",
+        "industryTypeName": "中国共产党机关",
+        "parentIndustryTypeCd": "1900100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900200",
+        "industryTypeName": "国家机构",
+        "parentIndustryTypeCd": "1900000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900210",
+        "industryTypeName": "国家权力机构",
+        "parentIndustryTypeCd": "1900200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900220",
+        "industryTypeName": "国家行政机构",
+        "parentIndustryTypeCd": "1900200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900221",
+        "industryTypeName": "综合事务管理机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900222",
+        "industryTypeName": "对外事务管理机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900223",
+        "industryTypeName": "公共安全管理机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900224",
+        "industryTypeName": "社会事务管理机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900225",
+        "industryTypeName": "经济事务管理机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900226",
+        "industryTypeName": "政府事务管理机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900227",
+        "industryTypeName": "行政监督检查机构",
+        "parentIndustryTypeCd": "1900220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900230",
+        "industryTypeName": "人民法院和人民检察院",
+        "parentIndustryTypeCd": "1900200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900231",
+        "industryTypeName": "人民法院",
+        "parentIndustryTypeCd": "1900230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900232",
+        "industryTypeName": "人民检察院",
+        "parentIndustryTypeCd": "1900230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900240",
+        "industryTypeName": "其他国家机构",
+        "parentIndustryTypeCd": "1900200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900300",
+        "industryTypeName": "人民政协和民主党派",
+        "parentIndustryTypeCd": "1900000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900310",
+        "industryTypeName": "人民政协",
+        "parentIndustryTypeCd": "1900300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900320",
+        "industryTypeName": "民主党派",
+        "parentIndustryTypeCd": "1900300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900400",
+        "industryTypeName": "群众团体、社会团体和宗教组织",
+        "parentIndustryTypeCd": "1900000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900410",
+        "industryTypeName": "群众团体",
+        "parentIndustryTypeCd": "1900400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900411",
+        "industryTypeName": "工会",
+        "parentIndustryTypeCd": "1900410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900412",
+        "industryTypeName": "妇联",
+        "parentIndustryTypeCd": "1900410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900413",
+        "industryTypeName": "共青团",
+        "parentIndustryTypeCd": "1900410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900414",
+        "industryTypeName": "其他群众团体",
+        "parentIndustryTypeCd": "1900410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900420",
+        "industryTypeName": "社会团体",
+        "parentIndustryTypeCd": "1900400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900421",
+        "industryTypeName": "专业性团体",
+        "parentIndustryTypeCd": "1900420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900422",
+        "industryTypeName": "行业性团体",
+        "parentIndustryTypeCd": "1900420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900423",
+        "industryTypeName": "其他社会团体",
+        "parentIndustryTypeCd": "1900420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900430",
+        "industryTypeName": "宗教组织",
+        "parentIndustryTypeCd": "1900400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900500",
+        "industryTypeName": "基层群众自治组织",
+        "parentIndustryTypeCd": "1900000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900510",
+        "industryTypeName": "社区自治组织",
+        "parentIndustryTypeCd": "1900500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "1900520",
+        "industryTypeName": "村民自治组织",
+        "parentIndustryTypeCd": "1900500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200000",
+        "industryTypeName": "采矿业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200100",
+        "industryTypeName": "煤炭开采和洗选业",
+        "parentIndustryTypeCd": "200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200110",
+        "industryTypeName": "烟煤和无烟煤的开采洗选",
+        "parentIndustryTypeCd": "200100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200120",
+        "industryTypeName": "褐煤的开采洗选",
+        "parentIndustryTypeCd": "200100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200130",
+        "industryTypeName": "其他煤炭采选",
+        "parentIndustryTypeCd": "200100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200200",
+        "industryTypeName": "石油和天然气开采业",
+        "parentIndustryTypeCd": "200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200210",
+        "industryTypeName": "天然原油和天然气开采",
+        "parentIndustryTypeCd": "200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200220",
+        "industryTypeName": "与石油和天然气开采有关的服务活动",
+        "parentIndustryTypeCd": "200200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200300",
+        "industryTypeName": "黑色金属矿采选业",
+        "parentIndustryTypeCd": "200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200310",
+        "industryTypeName": "铁矿采选",
+        "parentIndustryTypeCd": "200300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200320",
+        "industryTypeName": "其他黑色金属矿采选",
+        "parentIndustryTypeCd": "200300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200400",
+        "industryTypeName": "有色金属矿采选业",
+        "parentIndustryTypeCd": "200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200410",
+        "industryTypeName": "常用有色金属矿采选",
+        "parentIndustryTypeCd": "200400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200411",
+        "industryTypeName": "铜矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200412",
+        "industryTypeName": "铅锌矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200413",
+        "industryTypeName": "镍钴矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200414",
+        "industryTypeName": "锡矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200415",
+        "industryTypeName": "锑矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200416",
+        "industryTypeName": "铝矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200417",
+        "industryTypeName": "镁矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200418",
+        "industryTypeName": "其他常用有色金属矿采选",
+        "parentIndustryTypeCd": "200410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200420",
+        "industryTypeName": "贵金属矿采选",
+        "parentIndustryTypeCd": "200400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200421",
+        "industryTypeName": "金矿采选",
+        "parentIndustryTypeCd": "200420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200422",
+        "industryTypeName": "银矿采选",
+        "parentIndustryTypeCd": "200420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200423",
+        "industryTypeName": "其他贵金属矿采选",
+        "parentIndustryTypeCd": "200420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200430",
+        "industryTypeName": "稀有稀土金属矿采选",
+        "parentIndustryTypeCd": "200400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200431",
+        "industryTypeName": "钨钼矿采选",
+        "parentIndustryTypeCd": "200430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200432",
+        "industryTypeName": "稀土金属矿采选",
+        "parentIndustryTypeCd": "200430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200433",
+        "industryTypeName": "放射性金属矿采选",
+        "parentIndustryTypeCd": "200430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200434",
+        "industryTypeName": "其他稀有金属矿采选",
+        "parentIndustryTypeCd": "200430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200500",
+        "industryTypeName": "非金属矿采选业",
+        "parentIndustryTypeCd": "200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200510",
+        "industryTypeName": "土砂石开采",
+        "parentIndustryTypeCd": "200500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200511",
+        "industryTypeName": "石灰石、石膏开采",
+        "parentIndustryTypeCd": "200510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200512",
+        "industryTypeName": "建筑装饰用石开采",
+        "parentIndustryTypeCd": "200510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200513",
+        "industryTypeName": "耐火土石开采",
+        "parentIndustryTypeCd": "200510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200514",
+        "industryTypeName": "粘土及其他土砂石开采",
+        "parentIndustryTypeCd": "200510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200520",
+        "industryTypeName": "化学矿采选",
+        "parentIndustryTypeCd": "200500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200530",
+        "industryTypeName": "采盐",
+        "parentIndustryTypeCd": "200500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200540",
+        "industryTypeName": "石棉及其他非金属矿采选",
+        "parentIndustryTypeCd": "200500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200541",
+        "industryTypeName": "石棉、云母矿采选",
+        "parentIndustryTypeCd": "200540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200542",
+        "industryTypeName": "石墨、滑石采选",
+        "parentIndustryTypeCd": "200540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200543",
+        "industryTypeName": "宝石、玉石开采",
+        "parentIndustryTypeCd": "200540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200544",
+        "industryTypeName": "其他非金属矿采选",
+        "parentIndustryTypeCd": "200540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200600",
+        "industryTypeName": "其他采矿业",
+        "parentIndustryTypeCd": "200000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "200610",
+        "industryTypeName": "其他采矿业",
+        "parentIndustryTypeCd": "200500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300000",
+        "industryTypeName": "制造业",
+        "parentIndustryTypeCd": "0"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300100",
+        "industryTypeName": "农副食品加工业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300110",
+        "industryTypeName": "谷物磨制",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300120",
+        "industryTypeName": "饲料加工",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300130",
+        "industryTypeName": "植物油加工",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300131",
+        "industryTypeName": "食用植物油加工",
+        "parentIndustryTypeCd": "300130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300132",
+        "industryTypeName": "非食用植物油加工",
+        "parentIndustryTypeCd": "300130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300140",
+        "industryTypeName": "制糖",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300150",
+        "industryTypeName": "屠宰及肉类加工",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300151",
+        "industryTypeName": "畜禽屠宰",
+        "parentIndustryTypeCd": "300150"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300152",
+        "industryTypeName": "肉制品及副产品加工",
+        "parentIndustryTypeCd": "300150"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300160",
+        "industryTypeName": "水产品加工",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300161",
+        "industryTypeName": "水产品冷冻加工",
+        "parentIndustryTypeCd": "300160"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300162",
+        "industryTypeName": "鱼糜制品及水产品干腌制加工",
+        "parentIndustryTypeCd": "300160"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300163",
+        "industryTypeName": "水产饲料制造",
+        "parentIndustryTypeCd": "300160"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300164",
+        "industryTypeName": "鱼油提取及制品的制造",
+        "parentIndustryTypeCd": "300160"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300165",
+        "industryTypeName": "其他水产品加工",
+        "parentIndustryTypeCd": "300160"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300170",
+        "industryTypeName": "蔬菜、水果和坚果加工",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300180",
+        "industryTypeName": "其他农副食品加工",
+        "parentIndustryTypeCd": "300100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300181",
+        "industryTypeName": "淀粉及淀粉制品的制造",
+        "parentIndustryTypeCd": "300180"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300182",
+        "industryTypeName": "豆制品制造",
+        "parentIndustryTypeCd": "300180"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300183",
+        "industryTypeName": "蛋品加工",
+        "parentIndustryTypeCd": "300180"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300184",
+        "industryTypeName": "其他未列明的农副食品加工",
+        "parentIndustryTypeCd": "300180"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300200",
+        "industryTypeName": "食品制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300210",
+        "industryTypeName": "焙烤食品制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300211",
+        "industryTypeName": "糕点、面包制造",
+        "parentIndustryTypeCd": "300210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300212",
+        "industryTypeName": "饼干及其他焙烤食品制造",
+        "parentIndustryTypeCd": "300210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300220",
+        "industryTypeName": "糖果、巧克力及蜜饯制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300221",
+        "industryTypeName": "糖果、巧克力制造",
+        "parentIndustryTypeCd": "300220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300222",
+        "industryTypeName": "蜜饯制作",
+        "parentIndustryTypeCd": "300220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300230",
+        "industryTypeName": "方便食品制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300231",
+        "industryTypeName": "米、面制品制造",
+        "parentIndustryTypeCd": "300230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300232",
+        "industryTypeName": "速冻食品制造",
+        "parentIndustryTypeCd": "300230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300233",
+        "industryTypeName": "方便面及其他方便食品制造",
+        "parentIndustryTypeCd": "300230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300240",
+        "industryTypeName": "液体乳及乳制品制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300250",
+        "industryTypeName": "罐头制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300251",
+        "industryTypeName": "肉、禽类罐头制造",
+        "parentIndustryTypeCd": "300250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300252",
+        "industryTypeName": "水产品罐头制造",
+        "parentIndustryTypeCd": "300250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300253",
+        "industryTypeName": "蔬菜、水果罐头制造",
+        "parentIndustryTypeCd": "300250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300254",
+        "industryTypeName": "其他罐头食品制造",
+        "parentIndustryTypeCd": "300250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300260",
+        "industryTypeName": "调味品、发酵制品制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300261",
+        "industryTypeName": "味精制造",
+        "parentIndustryTypeCd": "300260"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300262",
+        "industryTypeName": "酱油、食醋及类似制品的制造",
+        "parentIndustryTypeCd": "300260"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300263",
+        "industryTypeName": "其他调味品、发酵制品制造",
+        "parentIndustryTypeCd": "300260"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300270",
+        "industryTypeName": "其他食品制造",
+        "parentIndustryTypeCd": "300200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300271",
+        "industryTypeName": "营养、保健食品制造",
+        "parentIndustryTypeCd": "300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300272",
+        "industryTypeName": "冷冻饮品及食用冰制造",
+        "parentIndustryTypeCd": "300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300273",
+        "industryTypeName": "盐加工",
+        "parentIndustryTypeCd": "300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300274",
+        "industryTypeName": "食品及饲料添加剂制造",
+        "parentIndustryTypeCd": "300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300275",
+        "industryTypeName": "其他未列明的食品制造",
+        "parentIndustryTypeCd": "300270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300300",
+        "industryTypeName": "饮料制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300310",
+        "industryTypeName": "酒精制造",
+        "parentIndustryTypeCd": "300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300320",
+        "industryTypeName": "酒的制造",
+        "parentIndustryTypeCd": "300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300321",
+        "industryTypeName": "白酒制造",
+        "parentIndustryTypeCd": "300320"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300322",
+        "industryTypeName": "啤酒制造",
+        "parentIndustryTypeCd": "300320"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300323",
+        "industryTypeName": "黄酒制造",
+        "parentIndustryTypeCd": "300320"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300324",
+        "industryTypeName": "葡萄酒制造",
+        "parentIndustryTypeCd": "300320"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300325",
+        "industryTypeName": "其他酒制造",
+        "parentIndustryTypeCd": "300320"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300330",
+        "industryTypeName": "软饮料制造",
+        "parentIndustryTypeCd": "300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300331",
+        "industryTypeName": "碳酸饮料制造",
+        "parentIndustryTypeCd": "300330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300332",
+        "industryTypeName": "瓶（罐）装饮用水制造",
+        "parentIndustryTypeCd": "300330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300333",
+        "industryTypeName": "果菜汁及果菜汁饮料制造",
+        "parentIndustryTypeCd": "300330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300334",
+        "industryTypeName": "含乳饮料和植物蛋白饮料制造",
+        "parentIndustryTypeCd": "300330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300335",
+        "industryTypeName": "固体饮料制造",
+        "parentIndustryTypeCd": "300330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300336",
+        "industryTypeName": "茶饮料及其他软饮料制造",
+        "parentIndustryTypeCd": "300330"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300340",
+        "industryTypeName": "精制茶加工",
+        "parentIndustryTypeCd": "300300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300400",
+        "industryTypeName": "烟草制品业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300410",
+        "industryTypeName": "烟叶复烤",
+        "parentIndustryTypeCd": "300400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300420",
+        "industryTypeName": "卷烟制造",
+        "parentIndustryTypeCd": "300400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300430",
+        "industryTypeName": "其他烟草制品加工",
+        "parentIndustryTypeCd": "300400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300500",
+        "industryTypeName": "纺织业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300510",
+        "industryTypeName": "棉、化纤纺织及印染精加工",
+        "parentIndustryTypeCd": "300500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300511",
+        "industryTypeName": "棉、化纤纺织加工",
+        "parentIndustryTypeCd": "300510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300512",
+        "industryTypeName": "棉、化纤印染精加工",
+        "parentIndustryTypeCd": "300510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300520",
+        "industryTypeName": "毛纺织和染整精加工",
+        "parentIndustryTypeCd": "300500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300521",
+        "industryTypeName": "毛条加工",
+        "parentIndustryTypeCd": "300520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300522",
+        "industryTypeName": "毛纺织",
+        "parentIndustryTypeCd": "300520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300523",
+        "industryTypeName": "毛染整精加工",
+        "parentIndustryTypeCd": "300520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300530",
+        "industryTypeName": "麻纺织",
+        "parentIndustryTypeCd": "300500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300540",
+        "industryTypeName": "丝绢纺织及精加工",
+        "parentIndustryTypeCd": "300500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300541",
+        "industryTypeName": "缫丝加工",
+        "parentIndustryTypeCd": "300540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300542",
+        "industryTypeName": "绢纺和丝织加工",
+        "parentIndustryTypeCd": "300540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300543",
+        "industryTypeName": "丝印染精加工",
+        "parentIndustryTypeCd": "300540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300550",
+        "industryTypeName": "纺织制成品制造",
+        "parentIndustryTypeCd": "300500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300551",
+        "industryTypeName": "棉及化纤制品制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300552",
+        "industryTypeName": "毛制品制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300553",
+        "industryTypeName": "麻制品制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300554",
+        "industryTypeName": "丝制品制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300555",
+        "industryTypeName": "绳、索、缆的制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300556",
+        "industryTypeName": "纺织带和帘子布制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300557",
+        "industryTypeName": "无纺布制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300558",
+        "industryTypeName": "其他纺织制成品制造",
+        "parentIndustryTypeCd": "300550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300560",
+        "industryTypeName": "针织品、编织品及其制品制造",
+        "parentIndustryTypeCd": "300500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300561",
+        "industryTypeName": "棉、化纤针织品及编织品制造",
+        "parentIndustryTypeCd": "300560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300562",
+        "industryTypeName": "毛针织品及编织品制造",
+        "parentIndustryTypeCd": "300560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300563",
+        "industryTypeName": "丝针织品及编织品制造",
+        "parentIndustryTypeCd": "300560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300564",
+        "industryTypeName": "其他针织品及编织品制造",
+        "parentIndustryTypeCd": "300560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300600",
+        "industryTypeName": "纺织服装、鞋、帽制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300610",
+        "industryTypeName": "纺织服装制造",
+        "parentIndustryTypeCd": "300600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300620",
+        "industryTypeName": "纺织面料鞋的制造",
+        "parentIndustryTypeCd": "300600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300630",
+        "industryTypeName": "制帽",
+        "parentIndustryTypeCd": "300600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300700",
+        "industryTypeName": "皮革、毛皮、羽毛（绒）及其制品业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300710",
+        "industryTypeName": "皮革鞣制加工",
+        "parentIndustryTypeCd": "300700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300720",
+        "industryTypeName": "皮革制品制造",
+        "parentIndustryTypeCd": "300700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300721",
+        "industryTypeName": "皮鞋制造",
+        "parentIndustryTypeCd": "300720"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300722",
+        "industryTypeName": "皮革服装制造",
+        "parentIndustryTypeCd": "300720"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300723",
+        "industryTypeName": "皮箱、包(袋)制造",
+        "parentIndustryTypeCd": "300720"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300724",
+        "industryTypeName": "皮手套及皮装饰制品制造",
+        "parentIndustryTypeCd": "300720"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300725",
+        "industryTypeName": "其他皮革制品制造",
+        "parentIndustryTypeCd": "300720"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300730",
+        "industryTypeName": "毛皮鞣制及制品加工",
+        "parentIndustryTypeCd": "300700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300731",
+        "industryTypeName": "毛皮鞣制加工",
+        "parentIndustryTypeCd": "300730"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300732",
+        "industryTypeName": "毛皮服装加工",
+        "parentIndustryTypeCd": "300730"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300733",
+        "industryTypeName": "其他毛皮制品加工",
+        "parentIndustryTypeCd": "300730"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300740",
+        "industryTypeName": "羽毛(绒)加工及制品制造",
+        "parentIndustryTypeCd": "300700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300741",
+        "industryTypeName": "羽毛(绒)加工",
+        "parentIndustryTypeCd": "300740"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300742",
+        "industryTypeName": "羽毛(绒)制品加工",
+        "parentIndustryTypeCd": "300740"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300800",
+        "industryTypeName": "木材加工及木、竹、藤、棕、草制品业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300810",
+        "industryTypeName": "锯材、木片加工",
+        "parentIndustryTypeCd": "300800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300811",
+        "industryTypeName": "锯材加工",
+        "parentIndustryTypeCd": "300810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300812",
+        "industryTypeName": "木片加工",
+        "parentIndustryTypeCd": "300810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300820",
+        "industryTypeName": "人造板制造",
+        "parentIndustryTypeCd": "300800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300821",
+        "industryTypeName": "胶合板制造",
+        "parentIndustryTypeCd": "300820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300822",
+        "industryTypeName": "纤维板制造",
+        "parentIndustryTypeCd": "300820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300823",
+        "industryTypeName": "刨花板制造",
+        "parentIndustryTypeCd": "300820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300824",
+        "industryTypeName": "其他人造板、材制造",
+        "parentIndustryTypeCd": "300820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300830",
+        "industryTypeName": "木制品制造",
+        "parentIndustryTypeCd": "300800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300831",
+        "industryTypeName": "建筑用木料及木材组件加工",
+        "parentIndustryTypeCd": "300830"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300832",
+        "industryTypeName": "木容器制造",
+        "parentIndustryTypeCd": "300830"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300833",
+        "industryTypeName": "软木制品及其他木制品制造",
+        "parentIndustryTypeCd": "300830"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300840",
+        "industryTypeName": "竹、藤、棕、草制品制造",
+        "parentIndustryTypeCd": "300800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300900",
+        "industryTypeName": "家具制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300910",
+        "industryTypeName": "木质家具制造",
+        "parentIndustryTypeCd": "300900"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300920",
+        "industryTypeName": "竹、藤家具制造",
+        "parentIndustryTypeCd": "300900"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300930",
+        "industryTypeName": "金属家具制造",
+        "parentIndustryTypeCd": "300900"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300940",
+        "industryTypeName": "塑料家具制造",
+        "parentIndustryTypeCd": "300900"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "300950",
+        "industryTypeName": "其他家具制造",
+        "parentIndustryTypeCd": "300900"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301000",
+        "industryTypeName": "造纸及纸制品业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301010",
+        "industryTypeName": "纸浆制造",
+        "parentIndustryTypeCd": "301000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301020",
+        "industryTypeName": "造纸",
+        "parentIndustryTypeCd": "301000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301021",
+        "industryTypeName": "机制纸及纸板制造",
+        "parentIndustryTypeCd": "301020"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301022",
+        "industryTypeName": "手工纸制造",
+        "parentIndustryTypeCd": "301020"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301023",
+        "industryTypeName": "加工纸制造",
+        "parentIndustryTypeCd": "301020"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301030",
+        "industryTypeName": "纸制品制造",
+        "parentIndustryTypeCd": "301000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301031",
+        "industryTypeName": "纸和纸板容器的制造",
+        "parentIndustryTypeCd": "301030"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301032",
+        "industryTypeName": "其他纸制品制造",
+        "parentIndustryTypeCd": "301030"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301100",
+        "industryTypeName": "印刷业和记录媒介的复制",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301110",
+        "industryTypeName": "印刷",
+        "parentIndustryTypeCd": "301100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301111",
+        "industryTypeName": "书、报、刊印刷",
+        "parentIndustryTypeCd": "301110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301112",
+        "industryTypeName": "本册印制",
+        "parentIndustryTypeCd": "301110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301113",
+        "industryTypeName": "包装装潢及其他印刷",
+        "parentIndustryTypeCd": "301110"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301120",
+        "industryTypeName": "装订及其他印刷服务活动",
+        "parentIndustryTypeCd": "301100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301130",
+        "industryTypeName": "记录媒介的复制",
+        "parentIndustryTypeCd": "301100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301200",
+        "industryTypeName": "文教体育用品制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301210",
+        "industryTypeName": "文化用品制造",
+        "parentIndustryTypeCd": "301200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301211",
+        "industryTypeName": "文具制造",
+        "parentIndustryTypeCd": "301210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301212",
+        "industryTypeName": "笔的制造",
+        "parentIndustryTypeCd": "301210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301213",
+        "industryTypeName": "教学用模型及教具制造",
+        "parentIndustryTypeCd": "301210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301214",
+        "industryTypeName": "墨水、墨汁制造",
+        "parentIndustryTypeCd": "301210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301215",
+        "industryTypeName": "其他文化用品制造",
+        "parentIndustryTypeCd": "301210"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301220",
+        "industryTypeName": "体育用品制造",
+        "parentIndustryTypeCd": "301200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301221",
+        "industryTypeName": "球类制造",
+        "parentIndustryTypeCd": "301220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301222",
+        "industryTypeName": "体育器材及配件制造",
+        "parentIndustryTypeCd": "301220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301223",
+        "industryTypeName": "训练健身器材制造",
+        "parentIndustryTypeCd": "301220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301224",
+        "industryTypeName": "运动防护用具制造",
+        "parentIndustryTypeCd": "301220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301225",
+        "industryTypeName": "其他体育用品制造",
+        "parentIndustryTypeCd": "301220"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301230",
+        "industryTypeName": "乐器制造",
+        "parentIndustryTypeCd": "301200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301231",
+        "industryTypeName": "中乐器制造",
+        "parentIndustryTypeCd": "301230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301232",
+        "industryTypeName": "西乐器制造",
+        "parentIndustryTypeCd": "301230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301233",
+        "industryTypeName": "电子乐器制造",
+        "parentIndustryTypeCd": "301230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301234",
+        "industryTypeName": "其他乐器及零件制造",
+        "parentIndustryTypeCd": "301230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301240",
+        "industryTypeName": "玩具制造",
+        "parentIndustryTypeCd": "301200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301250",
+        "industryTypeName": "游艺器材及娱乐用品制造",
+        "parentIndustryTypeCd": "301200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301251",
+        "industryTypeName": "露天游乐场所游乐设备制造",
+        "parentIndustryTypeCd": "301250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301252",
+        "industryTypeName": "游艺用品及室内游艺器材制造",
+        "parentIndustryTypeCd": "301250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301300",
+        "industryTypeName": "石油加工、炼焦及核燃料加工业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301310",
+        "industryTypeName": "精炼石油产品的制造",
+        "parentIndustryTypeCd": "301300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301311",
+        "industryTypeName": "原油加工及石油制品制造",
+        "parentIndustryTypeCd": "301310"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301312",
+        "industryTypeName": "人造原油生产",
+        "parentIndustryTypeCd": "301310"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301320",
+        "industryTypeName": "炼焦",
+        "parentIndustryTypeCd": "301300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301330",
+        "industryTypeName": "核燃料加工",
+        "parentIndustryTypeCd": "301300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301400",
+        "industryTypeName": "化学原料及化学制品制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301410",
+        "industryTypeName": "基础化学原料制造",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301411",
+        "industryTypeName": "无机酸制造",
+        "parentIndustryTypeCd": "301410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301412",
+        "industryTypeName": "无机碱制造",
+        "parentIndustryTypeCd": "301410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301413",
+        "industryTypeName": "无机盐制造",
+        "parentIndustryTypeCd": "301410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301414",
+        "industryTypeName": "有机化学原料制造",
+        "parentIndustryTypeCd": "301410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301415",
+        "industryTypeName": "其他基础化学原料制造",
+        "parentIndustryTypeCd": "301410"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301420",
+        "industryTypeName": "肥料制造",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301421",
+        "industryTypeName": "氮肥制造",
+        "parentIndustryTypeCd": "301420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301422",
+        "industryTypeName": "磷肥制造",
+        "parentIndustryTypeCd": "301420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301423",
+        "industryTypeName": "钾肥制造",
+        "parentIndustryTypeCd": "301420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301424",
+        "industryTypeName": "复混肥料制造",
+        "parentIndustryTypeCd": "301420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301425",
+        "industryTypeName": "有机肥料及微生物肥料制造",
+        "parentIndustryTypeCd": "301420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301426",
+        "industryTypeName": "其他肥料制造",
+        "parentIndustryTypeCd": "301420"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301430",
+        "industryTypeName": "农药制造",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301431",
+        "industryTypeName": "化学农药制造",
+        "parentIndustryTypeCd": "301430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301432",
+        "industryTypeName": "生物化学农药及微生物农药制造",
+        "parentIndustryTypeCd": "301430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301440",
+        "industryTypeName": "涂料、油墨、颜料及类似产品制造",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301441",
+        "industryTypeName": "涂料制造",
+        "parentIndustryTypeCd": "301440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301442",
+        "industryTypeName": "油墨及类似产品制造",
+        "parentIndustryTypeCd": "301440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301443",
+        "industryTypeName": "颜料制造",
+        "parentIndustryTypeCd": "301440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301444",
+        "industryTypeName": "染料制造",
+        "parentIndustryTypeCd": "301440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301445",
+        "industryTypeName": "密封用填料及类似品制造",
+        "parentIndustryTypeCd": "301440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301450",
+        "industryTypeName": "合成材料制造",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301451",
+        "industryTypeName": "初级形态的塑料及合成树脂制造",
+        "parentIndustryTypeCd": "301450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301452",
+        "industryTypeName": "合成橡胶制造",
+        "parentIndustryTypeCd": "301450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301453",
+        "industryTypeName": "合成纤维单(聚合)体的制造",
+        "parentIndustryTypeCd": "301450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301454",
+        "industryTypeName": "其他合成材料制造",
+        "parentIndustryTypeCd": "301450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301460",
+        "industryTypeName": "专用化学产品制造",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301461",
+        "industryTypeName": "化学试剂和助剂制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301462",
+        "industryTypeName": "专项化学用品制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301463",
+        "industryTypeName": "林产化学产品制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301464",
+        "industryTypeName": "炸药及火工产品制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301465",
+        "industryTypeName": "信息化学品制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301466",
+        "industryTypeName": "环境污染处理专用药剂材料制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301467",
+        "industryTypeName": "动物胶制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301468",
+        "industryTypeName": "其他专用化学产品制造",
+        "parentIndustryTypeCd": "301460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "301470",
+        "industryTypeName": "日用化学产品制 ",
+        "parentIndustryTypeCd": "301400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302120",
+        "industryTypeName": "贵金属冶炼",
+        "parentIndustryTypeCd": "302100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302121",
+        "industryTypeName": "金冶炼",
+        "parentIndustryTypeCd": "302120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302122",
+        "industryTypeName": "银冶炼",
+        "parentIndustryTypeCd": "302120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302123",
+        "industryTypeName": "其他贵金属冶炼",
+        "parentIndustryTypeCd": "302120"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302130",
+        "industryTypeName": "稀有稀土金属冶炼",
+        "parentIndustryTypeCd": "302100"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302131",
+        "industryTypeName": "钨钼冶炼",
+        "parentIndustryTypeCd": "302130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302132",
+        "industryTypeName": "稀土金属冶炼",
+        "parentIndustryTypeCd": "302130"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302230",
+        "industryTypeName": "集装箱及金属包装容器制造",
+        "parentIndustryTypeCd": "302200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302231",
+        "industryTypeName": "集装箱制造",
+        "parentIndustryTypeCd": "302230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302232",
+        "industryTypeName": "金属压力容器制造",
+        "parentIndustryTypeCd": "302230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302233",
+        "industryTypeName": "金属包装容器制造",
+        "parentIndustryTypeCd": "302230"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302250",
+        "industryTypeName": "建筑、安全用金属制品制造",
+        "parentIndustryTypeCd": "302200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302251",
+        "industryTypeName": "建筑、家具用金属配件制造",
+        "parentIndustryTypeCd": "302250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302252",
+        "industryTypeName": "建筑装饰及水暖管道零件制造",
+        "parentIndustryTypeCd": "302250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302253",
+        "industryTypeName": "安全、消防用金属制品制造",
+        "parentIndustryTypeCd": "302250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302254",
+        "industryTypeName": "其他建筑、安全用金属制品制造",
+        "parentIndustryTypeCd": "302250"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302270",
+        "industryTypeName": "搪瓷制品制造",
+        "parentIndustryTypeCd": "302200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302271",
+        "industryTypeName": "工业生产配套用搪瓷制品制造",
+        "parentIndustryTypeCd": "302270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302272",
+        "industryTypeName": "搪瓷卫生洁具制造",
+        "parentIndustryTypeCd": "302270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302273",
+        "industryTypeName": "搪瓷日用品及其他搪瓷制品制造",
+        "parentIndustryTypeCd": "302270"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302280",
+        "industryTypeName": "不锈钢及类似日用金属制品制造",
+        "parentIndustryTypeCd": "302200"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302281",
+        "industryTypeName": "金属制厨房调理及卫生器具制造",
+        "parentIndustryTypeCd": "302280"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302282",
+        "industryTypeName": "金属制厨用器皿及餐具制造",
+        "parentIndustryTypeCd": "302280"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302340",
+        "industryTypeName": "泵、阀门、压缩机及类似机械的制造",
+        "parentIndustryTypeCd": "302300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302341",
+        "industryTypeName": "泵及真空设备制造",
+        "parentIndustryTypeCd": "302340"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302342",
+        "industryTypeName": "气体压缩机械制造",
+        "parentIndustryTypeCd": "302340"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302343",
+        "industryTypeName": "阀门和旋塞的制造",
+        "parentIndustryTypeCd": "302340"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302344",
+        "industryTypeName": "液压和气压动力机械及元件制造",
+        "parentIndustryTypeCd": "302340"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302350",
+        "industryTypeName": "轴承、齿轮、传动和驱动部件的制造",
+        "parentIndustryTypeCd": "302300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302351",
+        "industryTypeName": "轴承制造",
+        "parentIndustryTypeCd": "302350"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302352",
+        "industryTypeName": "齿轮、传动和驱动部件制造",
+        "parentIndustryTypeCd": "302350"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302370",
+        "industryTypeName": "风机、衡器、包装设备等通用设备制造",
+        "parentIndustryTypeCd": "302300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302371",
+        "industryTypeName": "风机、风扇制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302372",
+        "industryTypeName": "气体、液体分离及纯净设备制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302373",
+        "industryTypeName": "制冷、空调设备制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302374",
+        "industryTypeName": "风动和电动工具制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302375",
+        "industryTypeName": "喷枪及类似器具制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302376",
+        "industryTypeName": "包装专用设备制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302377",
+        "industryTypeName": "衡器制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302378",
+        "industryTypeName": "其他通用设备制造",
+        "parentIndustryTypeCd": "302370"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302380",
+        "industryTypeName": "通用零部件制造及机械修理",
+        "parentIndustryTypeCd": "302300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302381",
+        "industryTypeName": "金属密封件制造",
+        "parentIndustryTypeCd": "302380"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302382",
+        "industryTypeName": "紧固件、弹簧制造",
+        "parentIndustryTypeCd": "302380"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302383",
+        "industryTypeName": "机械零部件加工及设备修理",
+        "parentIndustryTypeCd": "302380"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302384",
+        "industryTypeName": "其他通用零部件制造",
+        "parentIndustryTypeCd": "302380"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302390",
+        "industryTypeName": "金属铸、锻加工",
+        "parentIndustryTypeCd": "302300"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302391",
+        "industryTypeName": "钢铁铸件制造",
+        "parentIndustryTypeCd": "302390"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302392",
+        "industryTypeName": "锻件及粉末冶金制品制造",
+        "parentIndustryTypeCd": "302390"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302400",
+        "industryTypeName": "专用设备制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302430",
+        "industryTypeName": "食品、饮料、烟草及饲料生产专用设备制造　　　",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302431",
+        "industryTypeName": "食品、饮料、烟草工业专用设备制造",
+        "parentIndustryTypeCd": "302430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302432",
+        "industryTypeName": "农副食品加工专用设备制造",
+        "parentIndustryTypeCd": "302430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302433",
+        "industryTypeName": "饲料生产专用设备制造",
+        "parentIndustryTypeCd": "302430"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302440",
+        "industryTypeName": "印刷、制药、日化生产专用设备制造",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302441",
+        "industryTypeName": "制浆和造纸专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302442",
+        "industryTypeName": "印刷专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302443",
+        "industryTypeName": "日用化工专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302444",
+        "industryTypeName": "制药专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302445",
+        "industryTypeName": "照明器具生产专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302446",
+        "industryTypeName": "玻璃、陶瓷和搪瓷制品生产专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302447",
+        "industryTypeName": "其他日用品生产专用设备制造",
+        "parentIndustryTypeCd": "302440"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302450",
+        "industryTypeName": "纺织、服装和皮革工业专用设备制造",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302451",
+        "industryTypeName": "纺织专用设备制造",
+        "parentIndustryTypeCd": "302450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302452",
+        "industryTypeName": "皮革、毛皮及其制品加工专用设备制造",
+        "parentIndustryTypeCd": "302450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302453",
+        "industryTypeName": "缝纫机械制造",
+        "parentIndustryTypeCd": "302450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302454",
+        "industryTypeName": "其他服装加工专用设备制造",
+        "parentIndustryTypeCd": "302450"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302460",
+        "industryTypeName": "电子和电工机械专用设备制造",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302461",
+        "industryTypeName": "电工机械专用设备制造",
+        "parentIndustryTypeCd": "302460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302462",
+        "industryTypeName": "电子工业专用设备制造",
+        "parentIndustryTypeCd": "302460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302463",
+        "industryTypeName": "武器弹药制造",
+        "parentIndustryTypeCd": "302460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302464",
+        "industryTypeName": "航空、航天及其他专用设备制造",
+        "parentIndustryTypeCd": "302460"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302470",
+        "industryTypeName": "农、林、牧、渔专用机械制造",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302471",
+        "industryTypeName": "拖拉机制造",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302472",
+        "industryTypeName": "机械化农业及园艺机具制造",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302473",
+        "industryTypeName": "营林及木竹采伐机械制造",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302474",
+        "industryTypeName": "畜牧机械制造",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302475",
+        "industryTypeName": "渔业机械制造",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302476",
+        "industryTypeName": "农林牧渔机械配件制造",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302477",
+        "industryTypeName": "其他农林牧渔业机械制造及机械修理",
+        "parentIndustryTypeCd": "302470"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302480",
+        "industryTypeName": "医疗仪器设备及器械制造",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302481",
+        "industryTypeName": "医疗诊断、监护及治疗设备制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302482",
+        "industryTypeName": "口腔科用设备及器具制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302483",
+        "industryTypeName": "实验室及医用消毒设备和器具的制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302484",
+        "industryTypeName": "医疗、外科及兽医用器械制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302485",
+        "industryTypeName": "机械治疗及病房护理设备制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302486",
+        "industryTypeName": "假肢、人工器官及植（介）入器械制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302487",
+        "industryTypeName": "其他医疗设备及器械制造",
+        "parentIndustryTypeCd": "302480"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302490",
+        "industryTypeName": "环保、社会公共安全及其他专用设备制造",
+        "parentIndustryTypeCd": "302400"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302491",
+        "industryTypeName": "环境污染防治专用设备制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302492",
+        "industryTypeName": "地质勘查专用设备制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302493",
+        "industryTypeName": "邮政专用机械及器材制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302494",
+        "industryTypeName": "商业、饮食、服务业专用设备制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302495",
+        "industryTypeName": "社会公共安全设备及器材制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302496",
+        "industryTypeName": "交通安全及管制专用设备制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302497",
+        "industryTypeName": "水资源专用机械制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302498",
+        "industryTypeName": "其他专用设备制造",
+        "parentIndustryTypeCd": "302490"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302500",
+        "industryTypeName": "交通运输设备制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302510",
+        "industryTypeName": "铁路运输设备制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302511",
+        "industryTypeName": "铁路机车车辆及动车组制造",
+        "parentIndustryTypeCd": "302510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302512",
+        "industryTypeName": "工矿有轨专用车辆制造",
+        "parentIndustryTypeCd": "302510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302513",
+        "industryTypeName": "铁路机车车辆配件制造",
+        "parentIndustryTypeCd": "302510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302514",
+        "industryTypeName": "铁路专用设备及器材、配件制造",
+        "parentIndustryTypeCd": "302510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302515",
+        "industryTypeName": "其他铁路设备制造及设备修理",
+        "parentIndustryTypeCd": "302510"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302520",
+        "industryTypeName": "汽车制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302521",
+        "industryTypeName": "汽车整车制造",
+        "parentIndustryTypeCd": "302520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302522",
+        "industryTypeName": "改装汽车制造",
+        "parentIndustryTypeCd": "302520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302523",
+        "industryTypeName": "电车制造",
+        "parentIndustryTypeCd": "302520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302524",
+        "industryTypeName": "汽车车身、挂车的制造",
+        "parentIndustryTypeCd": "302520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302525",
+        "industryTypeName": "汽车零部件及配件制造",
+        "parentIndustryTypeCd": "302520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302526",
+        "industryTypeName": "汽车修理",
+        "parentIndustryTypeCd": "302520"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302530",
+        "industryTypeName": "摩托车制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302531",
+        "industryTypeName": "摩托车整车制造",
+        "parentIndustryTypeCd": "302530"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302532",
+        "industryTypeName": "摩托车零部件及配件制造",
+        "parentIndustryTypeCd": "302530"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302540",
+        "industryTypeName": "自行车制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302541",
+        "industryTypeName": "脚踏自行车及残疾人座车制造",
+        "parentIndustryTypeCd": "302540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302542",
+        "industryTypeName": "助动自行车制造",
+        "parentIndustryTypeCd": "302540"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302550",
+        "industryTypeName": "船舶及浮动装置制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302551",
+        "industryTypeName": "金属船舶制造",
+        "parentIndustryTypeCd": "302550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302552",
+        "industryTypeName": "非金属船舶制造",
+        "parentIndustryTypeCd": "302550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302553",
+        "industryTypeName": "娱乐船和运动船的建造和修理",
+        "parentIndustryTypeCd": "302550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302554",
+        "industryTypeName": "船用配套设备制造",
+        "parentIndustryTypeCd": "302550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302555",
+        "industryTypeName": "船舶修理及拆船",
+        "parentIndustryTypeCd": "302550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302556",
+        "industryTypeName": "航标器材及其他浮动装置的制造",
+        "parentIndustryTypeCd": "302550"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302560",
+        "industryTypeName": "航空航天器制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302561",
+        "industryTypeName": "飞机制造及修理",
+        "parentIndustryTypeCd": "302560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302562",
+        "industryTypeName": "航天器制造",
+        "parentIndustryTypeCd": "302560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302563",
+        "industryTypeName": "其他飞行器制造",
+        "parentIndustryTypeCd": "302560"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302570",
+        "industryTypeName": "交通器材及其他交通运输设备制造",
+        "parentIndustryTypeCd": "302500"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302571",
+        "industryTypeName": "潜水及水下救捞装备制造",
+        "parentIndustryTypeCd": "302570"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302572",
+        "industryTypeName": "交通管理用金属标志及设施制造",
+        "parentIndustryTypeCd": "302570"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302573",
+        "industryTypeName": "其他交通运输设备制造",
+        "parentIndustryTypeCd": "302570"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302600",
+        "industryTypeName": "电气机械及器材制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302610",
+        "industryTypeName": "电机制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302611",
+        "industryTypeName": "发电机及发电机组制造",
+        "parentIndustryTypeCd": "302610"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302612",
+        "industryTypeName": "电动机制造",
+        "parentIndustryTypeCd": "302610"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302613",
+        "industryTypeName": "微电机及其他电机制造",
+        "parentIndustryTypeCd": "302610"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302620",
+        "industryTypeName": "输配电及控制设备制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302621",
+        "industryTypeName": "变压器、整流器和电感器制造",
+        "parentIndustryTypeCd": "302620"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302622",
+        "industryTypeName": "电容器及其配套设备制造",
+        "parentIndustryTypeCd": "302620"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302623",
+        "industryTypeName": "配电开关控制设备制造",
+        "parentIndustryTypeCd": "302620"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302624",
+        "industryTypeName": "电力电子元器件制造",
+        "parentIndustryTypeCd": "302620"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302625",
+        "industryTypeName": "其他输配电及控制设备制造",
+        "parentIndustryTypeCd": "302620"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302630",
+        "industryTypeName": "电线、电缆、光缆及电工器材制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302631",
+        "industryTypeName": "电线电缆制造",
+        "parentIndustryTypeCd": "302630"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302632",
+        "industryTypeName": "光纤、光缆制造",
+        "parentIndustryTypeCd": "302630"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302633",
+        "industryTypeName": "绝缘制品制造",
+        "parentIndustryTypeCd": "302630"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302634",
+        "industryTypeName": "其他电工器材制造",
+        "parentIndustryTypeCd": "302630"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302640",
+        "industryTypeName": "电池制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302650",
+        "industryTypeName": "家用电力器具制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302651",
+        "industryTypeName": "家用制冷电器具制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302652",
+        "industryTypeName": "家用空气调节器制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302653",
+        "industryTypeName": "家用通风电器具制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302654",
+        "industryTypeName": "家用厨房电器具制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302655",
+        "industryTypeName": "家用清洁卫生电器具制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302656",
+        "industryTypeName": "家用美容、保健电器具制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302657",
+        "industryTypeName": "家用电力器具专用配件制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302658",
+        "industryTypeName": "其他家用电力器具制造",
+        "parentIndustryTypeCd": "302650"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302660",
+        "industryTypeName": "非电力家用器具制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302661",
+        "industryTypeName": "燃气、太阳能及类似能源的器具制造",
+        "parentIndustryTypeCd": "302660"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302662",
+        "industryTypeName": "其他非电力家用器具制造",
+        "parentIndustryTypeCd": "302660"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302670",
+        "industryTypeName": "照明器具制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302671",
+        "industryTypeName": "电光源制造",
+        "parentIndustryTypeCd": "302670"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302672",
+        "industryTypeName": "照明灯具制造",
+        "parentIndustryTypeCd": "302670"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302673",
+        "industryTypeName": "灯用电器附件及其他照明器具制造",
+        "parentIndustryTypeCd": "302670"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302680",
+        "industryTypeName": "其他电气机械及器材制造",
+        "parentIndustryTypeCd": "302600"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302681",
+        "industryTypeName": "车辆专用照明及电气信号设备装置制造",
+        "parentIndustryTypeCd": "302680"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302682",
+        "industryTypeName": "其他未列明的电气机械制造",
+        "parentIndustryTypeCd": "302680"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302700",
+        "industryTypeName": "通信设备、计算机及其他电子设备制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302710",
+        "industryTypeName": "通信设备制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302711",
+        "industryTypeName": "通信传输设备制造",
+        "parentIndustryTypeCd": "302710"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302712",
+        "industryTypeName": "通信交换设备制造",
+        "parentIndustryTypeCd": "302710"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302713",
+        "industryTypeName": "通信终端设备制造",
+        "parentIndustryTypeCd": "302710"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302714",
+        "industryTypeName": "移动通信及终端设备制造",
+        "parentIndustryTypeCd": "302710"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302715",
+        "industryTypeName": "其他通信设备制造",
+        "parentIndustryTypeCd": "302710"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302720",
+        "industryTypeName": "雷达及配套设备制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302730",
+        "industryTypeName": "广播电视设备制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302731",
+        "industryTypeName": "广播电视节目制作及发射设备制造",
+        "parentIndustryTypeCd": "302730"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302732",
+        "industryTypeName": "广播电视接收设备及器材制造",
+        "parentIndustryTypeCd": "302730"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302733",
+        "industryTypeName": "应用电视设备及其他广播电视设备制造",
+        "parentIndustryTypeCd": "302730"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302740",
+        "industryTypeName": "电子计算机制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302741",
+        "industryTypeName": "电子计算机整机制造",
+        "parentIndustryTypeCd": "302740"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302742",
+        "industryTypeName": "计算机网络设备制造",
+        "parentIndustryTypeCd": "302740"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302743",
+        "industryTypeName": "电子计算机外部设备制造",
+        "parentIndustryTypeCd": "302740"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302750",
+        "industryTypeName": "电子器件制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302751",
+        "industryTypeName": "电子真空器件制造",
+        "parentIndustryTypeCd": "302750"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302752",
+        "industryTypeName": "半导体分立器件制造",
+        "parentIndustryTypeCd": "302750"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302753",
+        "industryTypeName": "集成电路制造",
+        "parentIndustryTypeCd": "302750"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302754",
+        "industryTypeName": "光电子器件及其他电子器件制造",
+        "parentIndustryTypeCd": "302750"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302760",
+        "industryTypeName": "电子元件制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302761",
+        "industryTypeName": "电子元件及组件制造\n\n",
+        "parentIndustryTypeCd": "302760"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302762",
+        "industryTypeName": "印制电路板制造",
+        "parentIndustryTypeCd": "302760"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302770",
+        "industryTypeName": "家用视听设备制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302771",
+        "industryTypeName": "家用影视设备制造",
+        "parentIndustryTypeCd": "302770"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302772",
+        "industryTypeName": "家用音响设备制造",
+        "parentIndustryTypeCd": "302770"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302780",
+        "industryTypeName": "其他电子设备制造",
+        "parentIndustryTypeCd": "302700"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302800",
+        "industryTypeName": "仪器仪表及文化、办公用机械制造业",
+        "parentIndustryTypeCd": "300000"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302810",
+        "industryTypeName": "通用仪器仪表制造",
+        "parentIndustryTypeCd": "302800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302811",
+        "industryTypeName": "工业自动控制系统装置制造",
+        "parentIndustryTypeCd": "302810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302812",
+        "industryTypeName": "电工仪器仪表制造",
+        "parentIndustryTypeCd": "302810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302813",
+        "industryTypeName": "绘图、计算及测量仪器制造",
+        "parentIndustryTypeCd": "302810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302814",
+        "industryTypeName": "实验分析仪器制造",
+        "parentIndustryTypeCd": "302810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302815",
+        "industryTypeName": "试验机制造",
+        "parentIndustryTypeCd": "302810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302816",
+        "industryTypeName": "供应用仪表及其他通用仪器制造",
+        "parentIndustryTypeCd": "302810"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302820",
+        "industryTypeName": "专用仪器仪表制造",
+        "parentIndustryTypeCd": "302800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302821",
+        "industryTypeName": "环境监测专用仪器仪表制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302822",
+        "industryTypeName": "汽车及其他用计数仪表制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302823",
+        "industryTypeName": "导航、气象及海洋专用仪器制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302824",
+        "industryTypeName": "农林牧渔专用仪器仪表制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302825",
+        "industryTypeName": "地质勘探和地震专用仪器制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302826",
+        "industryTypeName": "教学专用仪器制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302827",
+        "industryTypeName": "核子及核辐射测量仪器制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302828",
+        "industryTypeName": "电子测量仪器制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302829",
+        "industryTypeName": "其他专用仪器制造",
+        "parentIndustryTypeCd": "302820"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302830",
+        "industryTypeName": "钟表与计时仪器制造",
+        "parentIndustryTypeCd": "302800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302840",
+        "industryTypeName": "光学仪器及眼镜制造",
+        "parentIndustryTypeCd": "302800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302841",
+        "industryTypeName": "光学仪器制造",
+        "parentIndustryTypeCd": "302840"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302842",
+        "industryTypeName": "眼镜制造",
+        "parentIndustryTypeCd": "302840"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302850",
+        "industryTypeName": "文化、办公用机械制造",
+        "parentIndustryTypeCd": "302800"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302851",
+        "industryTypeName": "电影机械制造",
+        "parentIndustryTypeCd": "302850"
+    },
+    {
+        "operation": null,
+        "industryTypeCd": "302852",
+        "industryTypeName": "幻灯及投影设备制造",
+        "parentIndustryTypeCd": "302850"
+    }
+]

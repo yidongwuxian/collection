@@ -12,7 +12,7 @@
     <link href="css/mui.picker.min.css" rel="stylesheet" />
     <link href="css/collection.css" rel="stylesheet"/>
 </head>
-<body >
+<body>
 	<div class="searchbar">
 	    <div class="mui-search-bar" id="searchBar">
 	        <form class="mui-search-bar-form">
@@ -30,16 +30,14 @@
 	    </div>
 	</div>
 	<div class="mui-content" style="position:relative;">
-		<div class="searchbar-result" id="searchResult">
-			
-		</div>
+		<div class="searchbar-result" id="searchResult"></div>
 		<div class="smarkBox">
 	    	<a class='mui-btn mui-btn-red mui-icon mui-icon-paperclip smarkLnk'></a>
 			<a class='mui-btn mui-btn-yellow mui-icon mui-icon-info smarkLnk'></a>
 			<a class='mui-btn mui-btn-grey mui-icon mui-icon-plus smarkLnk'></a>
-			<a class='mui-btn mui-btn-red mui-icon mui-icon-compose smarkLnk'></a>
 			<a class='mui-btn mui-btn-yellow mui-icon mui-icon-phone smarkLnk'></a>
-			<a class='mui-btn mui-btn-grey mui-icon mui-icon-person smarkLnk'></a>
+			<a class='mui-btn mui-btn-red mui-icon mui-icon-compose smarkLnk'></a>
+			<a class='mui-btn mui-btn-grey mui-icon mui-icon-email smarkLnk'></a>
 	    </div>
 	    <div class="loadingPic">
             <i class="loading"></i>
@@ -51,7 +49,7 @@
 	</div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/mui.min.js"></script>
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript"> 
 $(function(){
 	var $searchBar    = $('#searchBar'),
 	    $searchResult = $('#searchResult'),
@@ -171,7 +169,6 @@ $(function(){
        		if($(".loadingPic").is(":visible") ==false){
        			showNodata();
        		}
-       		
        	}
        	
        	function showNodata(){
@@ -183,7 +180,12 @@ $(function(){
 			$('#searchResult li').click(function(e){
 				$(this).css('backgroundColor','#ffffff').siblings().css('backgroundColor','#f8f8f8');
 				var dataId = $(this).attr("data-id");
-				$(this).parents().parents().find('.smarkLnk').attr('href','index.html?id='+dataId+'');	  	
+				$(this).parents().parents().find('.mui-icon-paperclip.smarkLnk').attr('href','baseInfo.html?id='+dataId+'');
+				$(this).parents().parents().find('.mui-icon-info.smarkLnk').attr('href','defaultInfo.html?id='+dataId+'');				
+				$(this).parents().parents().find('.mui-icon-plus.smarkLnk').attr('href','histroyInfo.html?id='+dataId+'');
+				$(this).parents().parents().find('.mui-icon-phone.smarkLnk').attr('href','phoneCollection.html?id='+dataId+'');
+				$(this).parents().parents().find('.mui-icon-compose.smarkLnk').attr('href','interviewCollection.html?id='+dataId+'');				
+				$(this).parents().parents().find('.mui-icon-email.smarkLnk').attr('href','lettersCollection.html?id='+dataId+'');	
 				$(this).parents().parents().find('.smarkBox').show();
 			});
 		}

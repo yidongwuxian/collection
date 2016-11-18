@@ -1,24 +1,29 @@
 .mui-input-group .mui-input-row{ display: flex; }
 .mui-input-group .mui-button-row{ padding:0 !important; }
-.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{ top:0 !important; }
-.mui-checkbox, .mui-radio { width: 50%; display: inline-block; float: left; }
-.mui-checkbox.mui-left label, .mui-radio.mui-left label { padding-bottom: 4px; padding-top: 4px; padding-right: 0 !important;}
+.mui-input-row label{ width:100% !important; }
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{ padding:0 !important; }
+/*.mui-checkbox, .mui-radio { width: 50%; display: inline-block; float: left; }*/
+.mui-checkbox.mui-left label, .mui-radio.mui-left label {padding-right: 0 !important;}
 .mui-table-view-cell.mui-collapse .mui-collapse-content{ padding:8px 0 !important; }
-.dtp{ width:100%; height:37px; padding:6px 5px !important; border: 0 !important; font-size: 17px !important;
+.dtp,.dtp2,.interdtp,.repaydtp{ width:100%; height:37px; padding:6px 5px !important; border: 0 !important; 
     color: #000 !important; text-align:left;}
 .mui-cell-bd{ -webkit-box-flex: 1; -webkit-flex: 1; flex: 1;}
 .mui-cell-bd .mui-select { -webkit-appearance: none; border: 0; outline: 0; background-color: transparent; width: 100%; font-size: inherit; height: 37px; line-height: 37px; position: relative; z-index: 1; padding-left: 0; }
 .mui-cell-select .mui-select { padding-right: 30px; }
-.mui-cell-hd label{ width:144px; display: block; word-break: break-word; word-break: break-all; }
+.mui-cell-hd label{ width:100%;  padding:11px 0 11px 15px; display: block; word-break: break-word; word-break: break-all; }
 .mui-cell-select .mui-cell-bd:after{ content: " "; display: inline-block; height: 6px; width: 6px; border-width: 2px 2px 0 0; border-color: #C8C8CD; border-style: solid; -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: relative; top: -2px; position: absolute; top: 50%; right: 15px; margin-top: -3px;}
-.mui-cell-bd input{ border:none !important; padding: 10px 15px 10px 5px !important; }
+.mui-cell-bd input.txr{ border:none !important; text-align: right; }
+.mItem input, .mItem button{ border:none !important; padding: 10px 15px 10px 5px !important; }
+.mui-cell-bd .rtl{ direction:rtl; }
 .mui-test.hidden{ display: none; }
+.borrowerclass{ overflow:hidden;}
 .mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{ padding-left:15px !important; }
 #searchResult .mui-table-view li{ background-color: #f8f8f8; }
 #searchResult .mui-table-view li.mui-slider-handle{ background-color: #f8f8f8;}
 .mui-btn.mui-icon{ line-height: 1 !important; }
 .mui-btn, button, input[type=button], input[type=reset], input[type=submit]{ padding:4px 8px !important; }
 .searchbar{ top:0; left:0; right:0; height:44px; z-index:9999; }
+.m5{ margin:5px;}
 /*search*/
 .mui-badge{ margin:5px; }
 .mui-table-view-cell>.mui-slider-left>.mui-btn:after,.mui-table-view-cell>.mui-slider-right>.mui-btn:after{width:0% !important;}

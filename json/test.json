@@ -1,4 +1,141 @@
-{
-    "result": 1,
-    "message" : ""
-}
+[
+    {
+        "name": "金科测试",
+        "id": 1,
+        "department_id": 1,
+        "parent_id": 0,
+        "children": [
+            {
+                "name": "开发组",
+                "id": 2,
+                "department_id": 2,
+                "parent_id": 1,
+                "children": [
+                    {
+                        "name": "开发一部",
+                        "id": 13,
+                        "department_id": 3,
+                        "parent_id": 2,
+                        "children": []
+                    },
+                    {
+                        "name": "开发二部",
+                        "id": 14,
+                        "department_id": 16,
+                        "parent_id": 2,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "测试组",
+                "id": 3,
+                "department_id": 5,
+                "parent_id": 1,
+                "children": []
+            },
+            {
+                "name": "考试应用测试",
+                "id": 4,
+                "department_id": 15,
+                "parent_id": 1,
+                "children": []
+            },
+            {
+                "name": "综合管理部",
+                "id": 5,
+                "department_id": 17,
+                "parent_id": 1,
+                "children": []
+            },
+            {
+                "name": "asd",
+                "id": 6,
+                "department_id": 20,
+                "parent_id": 1,
+                "children": []
+            },
+            {
+                "name": "小贷",
+                "id": 7,
+                "department_id": 18,
+                "parent_id": 1,
+                "children": []
+            },
+            {
+                "name": "hello",
+                "id": 8,
+                "department_id": 21,
+                "parent_id": 1,
+                "children": [
+                    {
+                        "name": "hello22",
+                        "id": 9,
+                        "department_id": 22,
+                        "parent_id": 21,
+                        "children": []
+                    },
+                    {
+                        "name": "hell5",
+                        "id": 16,
+                        "department_id": 26,
+                        "parent_id": 21,
+                        "children": []
+                    },
+                    {
+                        "name": "hello33",
+                        "id": 255,
+                        "department_id": 33,
+                        "parent_id": 21,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "测试部门",
+                "id": 12,
+                "department_id": 27,
+                "parent_id": 1,
+                "children": [
+                    {
+                        "name": "测试部门二",
+                        "id": 17,
+                        "department_id": 28,
+                        "parent_id": 27,
+                        "children": []
+                    },
+                    {
+                        "name": "测试部门3",
+                        "id": 18,
+                        "department_id": 29,
+                        "parent_id": 27,
+                        "children": []
+                    },
+                    {
+                        "name": "测试部门4",
+                        "id": 19,
+                        "department_id": 30,
+                        "parent_id": 27,
+                        "children": [
+                            {
+                                "name": "测试部门5",
+                                "id": 20,
+                                "department_id": 31,
+                                "parent_id": 30,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "东方汇项目组",
+                "id": 254,
+                "department_id": 32,
+                "parent_id": 1,
+                "children": []
+            }
+        ],
+        "open": true
+    }
+]

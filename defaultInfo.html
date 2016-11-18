@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>拖欠信息</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet"/>
+    <link href="css/collection.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="mui-content">
+	<input type="hidden" class="urlId" value="" />
+    <form class="mui-input-group" id="collectionForm">
+                 <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>罚息计算日期:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="penaltyInstDate" class="txr" name="penaltyInstDate" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>拖欠本金(合同期内)(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="arrearsPrincipal" class="txr" name="arrearsPrincipal" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>拖欠利息(合同期内)(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="arrearsInst" class="txr" name="arrearsInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>拖欠本金的罚息(合同期内)(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="arrearsPrincipalPenaltyInst" class="txr" name="arrearsPrincipalPenaltyInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>拖欠利息的罚息(合同期内)(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="arrearsInstPenaltyInst" class="txr" name="arrearsInstPenaltyInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>到期后产生的罚息(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="expiredPenaltyInst" class="txr" name="expiredPenaltyInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>到期后产生的利息(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="expiredInst" class="txr" name="expiredInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>拖欠罚息合计(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="sumArrearsPenaltyInst" class="txr" name="sumArrearsPenaltyInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>拖欠利息合计(元):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="sumArrearsInst" class="txr" name="sumArrearsInst" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+		 </form>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.getUrlParam = function(name){
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r!=null) return unescape(r[2]); return null;
+	}
+})(jQuery);
+$(function(){
+	$('.urlId').val($.getUrlParam('id'));
+	var urlId = $('.urlId').val();
+	
+	var $penaltyInstDate               = $('#penaltyInstDate'),                                        //罚息计算日期
+		$arrearsPrincipal              = $('#arrearsPrincipal'),                                      //拖欠本金
+		$arrearsInst                   = $('#arrearsInst'),                                          //拖欠利息
+		$arrearsPrincipalPenaltyInst   = $('#arrearsPrincipalPenaltyInst'),                         //拖欠本金的罚息(合同期内)
+		$arrearsInstPenaltyInst        = $('#arrearsInstPenaltyInst'),                             //拖欠利息的罚息(合同期内)
+		$expiredPenaltyInst            = $('#expiredPenaltyInst'),                                //到期后产生的罚息(元)
+		$expiredInst                   = $('#expiredInst'),                                      //到期后产生的利息(元)
+		$sumArrearsPenaltyInst         = $('#sumArrearsPenaltyInst'),                           //拖欠罚息合计(元)
+		$sumArrearsInst                = $('#sumArrearsInst');                                 //拖欠利息合计(元)
+		
+	
+	$.ajax({
+        type: 'GET',
+        url: 'json/tag.json',
+        cache:false,
+        dataType: 'json',
+        success: function (data){    	
+            if (data) {
+            	var newJson = data.aaData;
+                $.each(newJson, function (i,item) {
+                	if( urlId != '' && urlId == newJson[i].id ){
+                		$penaltyInstDate.val(newJson[i].penaltyInstDate);
+                		$arrearsPrincipal.val(newJson[i].arrearsPrincipal);
+                		$arrearsInst.val(newJson[i].arrearsInst);
+                		$arrearsPrincipalPenaltyInst.val(newJson[i].arrearsPrincipalPenaltyInst);
+                		$arrearsInstPenaltyInst.val(newJson[i].arrearsInstPenaltyInst);
+                		$expiredPenaltyInst.val(newJson[i].expiredPenaltyInst);
+                		$expiredInst.val(newJson[i].expiredInst ); 
+                		$sumArrearsPenaltyInst.val(newJson[i].sumArrearsPenaltyInst);
+                		$sumArrearsInst.val(newJson[i].sumArrearsInst);              		
+                	}
+                       
+                });
+            }
+        },
+        error: function(){
+        	mui.alert('请求错误','消息提示', '确定', function(){
+               hideLoading();
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>

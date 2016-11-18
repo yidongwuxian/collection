@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>电话催收</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/mui-extend.css" rel="stylesheet"/>
+    <link href="css/mui.picker.min.css" rel="stylesheet" />
+    <link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <link href="css/zTreeStyle/outlook.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet"/>
+    <link href="css/collection.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="mui-content">
+    <form class="mui-input-group" id="collectionForm">
+             <div class="mui-input-row mui-cell-select">
+                 <div class="mui-col-sm-6 mui-col-xs-12">
+                     <label>催收方式:</label>
+                 </div>
+		         <div class="mui-col-sm-6 mui-col-xs-12 mui-navigate-right">
+                     <select class="mui-select" id="collectionModes" name="collectionModes" disabled="disabled">
+                         <!--<option value="0">请选择</option>-->
+                         <option value="1">电话催收</option>
+                         <!--<option value="2">约谈催收</option>
+                         <option value="3">信函催收</option>-->
+                     </select>
+				 </div>
+		     </div>
+             <div class="mItem">
+                 <div class="mui-input-row">
+                     <div class="mui-col-sm-6 mui-col-xs-12">
+                         <label>催收时间:</label>
+                     </div>
+                     <div class="mui-col-sm-6 mui-col-xs-12">
+        				<button id='collectionTimes' name="collectionTimes" data-options='{"type":"date","beginYear":2015,"endYear":2016}' class="dtp" value=""></button>
+                    </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+                         <label>催收人:</label>
+                     </div>
+                     <div class="mui-col-sm-6 mui-col-xs-12">
+                         <input type="text" class="mui-input-clear pm5" id="collectionPerson" name="collectionPerson" value="" />
+                     </div>
+    		     </div>
+                 <div class="mui-input-row mui-cell-select">
+                     <div class="mui-col-sm-6 mui-col-xs-12">
+                         <label>此次催收结果:</label>
+                     </div>
+    		         <div class="mui-col-sm-6 mui-col-xs-12 mui-navigate-right">
+                         <select class="mui-select" id="collectionResult" name="collectionResult">
+                             <option value="0">请选择</option>
+                             <option value="1">拒绝还款</option>
+                             <option value="2">拖延还款</option>
+                             <option value="3">约定计划还款</option>
+                             <option value="4">电话打通未接听</option>
+                             <option value="5">无法接通</option>
+                             <option value="6">关机</option>
+                             <option value="7">停机</option>
+                             <option value="8">其他</option>
+                         </select>
+    				</div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		     	<div class="mui-col-sm-6 mui-col-xs-12">
+    		           <label>去电号码:</label>
+    		        </div>
+    		        <div class="mui-col-sm-6 mui-col-xs-12">
+    		           <input type="number" class="mui-input-clear" id="callerId" name="telephone" />
+					</div>    		     
+    		     </div>
+                 <div class="mui-input-row mui-cell-select">
+                     <div class="mui-col-sm-6 mui-col-xs-12">
+                         <label>催收对象种类:</label>
+                     </div>
+                     <div class="mui-col-sm-6 mui-col-xs-12 mui-navigate-right">
+                         <select class="mui-select" id="collectionTypes" name="collectionTypes">
+                             <option value="0">请选择</option>
+                             <option value="1">借款人</option>
+                             <option value="2">担保人</option>
+                             <option value="3">家人</option>
+                             <option value="4">朋友</option>
+                             <option value="5">其他</option>
+                         </select>
+    				</div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		     	 <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<label>催收对象姓名:</label>
+    		         </div>
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<input type="text" class="mui-input-clear" id="collectionName" name="collectionName" value="" />
+    		         </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		     	<div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<label>对方号码:</label>
+    		        </div>
+    		        <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<input type="number" class="mui-input-clear" id="endCall" value="" />
+    		        </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<label>贷款实际投向:</label>
+    		         </div>
+    		         <div class="mui-col-sm-6 mui-col-xs-12 mui-navigate-right">
+    		         	<input type="text" class="loansInto" id="loansIntos" name="loansIntos" placeholder="请选择" value="" readonly="readonly">
+    		         </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<label>承诺还款日期:</label>
+    		         </div>
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+    				 	<button id='promRepayDate' name='promRepayDate' data-options='{"type":"date","beginYear":2015,"endYear":2016}' class="dtp2" value=""></button>
+    				 </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<label>承诺还款金额:</label>
+    		         </div>
+    		         <div class="mui-col-sm-6 mui-col-xs-12">
+    		         	<input type="text" id="repayAmount" name="repayAmount" class="mui-input-clear" />
+    		         </div>
+    		     </div>
+                 <div class="mui-input-row mui-cell-select">
+                     <div class="mui-col-sm-6 mui-col-xs-12">
+                         <label>上期承诺是否兑现:</label>
+                     </div>
+    		         <div class="mui-col-sm-6 mui-col-xs-12 mui-navigate-right">
+                         <select class="mui-select" id="isCash" name="isCash">
+                             <option value="0">请选择</option>
+                             <option value="1">否</option>
+                             <option value="2">是</option>
+                         </select>
+    				</div>
+    		     </div>
+             	 <div class="mui-col-sm-12 mui-col-xs-12">
+             	 	<div class="mui-input-row">
+                 		<label>判断借款人分类:</label>
+                 	</div>
+                 </div>
+                 <div class="borrowerclass" id="borrowerClass" name="borrowerClass">
+	                 	<div class="mui-input-row mui-checkbox mui-left">
+	                 		<div class="mui-col-sm-6 mui-col-xs-12">
+								<label>老赖，故意拖欠</label>
+								<input name="checkbox" value="老赖，故意拖欠" type="checkbox">
+							</div>
+						
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<label>涉嫌刑事诈骗</label>
+								<input name="checkbox" value="涉嫌刑事诈骗" type="checkbox">
+							</div>
+						</div>
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>收入能力下降</label>
+							<input name="checkbox" value="收入能力下降" type="checkbox">
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>资金暂时短缺</label>
+							<input name="checkbox" value="资金暂时短缺" type="checkbox">
+						</div>
+					</div>
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>资金链断裂</label>
+							<input name="checkbox" value="收入能力下降" type="checkbox">
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>企业完全停止经营</label>
+							<input name="checkbox" value="资金暂时短缺" type="checkbox">
+						</div>
+					</div>
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>被骗财产</label>
+							<input name="checkbox" value="收入能力下降" type="checkbox">
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>无业</label>
+							<input name="checkbox" value="资金暂时短缺" type="checkbox">
+						</div>
+					</div>
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>借款主体发生意外（事故、死亡等）</label>
+							<input name="checkbox" value="收入能力下降" type="checkbox">
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>失联</label>
+							<input name="checkbox" value="资金暂时短缺" type="checkbox">
+						</div>
+					</div>
+					<div class="mui-input-row mui-checkbox mui-left">
+						<div class="mui-col-sm-6 mui-col-xs-12">
+							<label>其他</label>
+							<input name="checkbox" value="资金暂时短缺" type="checkbox">
+						</div>
+					</div>
+				 </div>
+    		     <div class="mui-content-padded">
+    		     	<div class="m5">催收内容:</div>
+    		     	<div style="margin: 10px 15px;">
+    					<textarea id="collectionContent" rows="5"></textarea>
+    				</div>
+    		     </div>
+    		     <div class="mui-content-padded">
+    		     	<div class="m5">借款人近况:</div>
+    		     	<div style="margin: 10px 15px;">
+    					<textarea id="loanRecent" rows="5" placeholder="填写逾期原因、是否继续恶化、还款来源、其他资产情况..."></textarea>
+    				</div>
+    		     </div>
+    		     <div class="mui-content-padded">
+    		     	<div class="m5">发现资产、行踪、联系方式等线索:</div>
+    		     	<div style="margin: 10px 15px;">
+    					<textarea id="clue" rows="5"></textarea>
+    				</div>
+    		     </div>
+    		     <div class="mui-content-padded">
+    		     	<div class="m5">下一步措施:</div>
+    		     	<div style="margin: 10px 15px;">
+    					<textarea id="nextStep" rows="5"></textarea>
+    				</div>
+    		     </div>
+    		     <div class="mui-content-padded">
+    		     	<div class="m5">备注:</div>
+    		     	<div style="margin: 10px 15px;">
+    					<textarea id="remarks" rows="5"></textarea>
+    				</div>
+    		     </div> 
+             <!--mItem end-->
+		     </div>
+		     
+		 </form>
+		 <div class="mui-button-row">
+		    <button type="button" class="mui-btn mui-btn-success" id="collectionSubmit">提交</button>
+		 </div>
+</div>
+<!--贷款投资定向 start-->
+<div class="hideZbox">
+	<div class="in">
+	 <div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<ul id="invest_to" class="ztree"></ul>
+		</div>
+	 </div>
+	</div> 
+</div>
+<div class="treeMask"></div>
+<!--贷款投资定向 end-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/ztree/jquery.ztree.core.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/kDialog.js"></script>
+<script src="js/investTree.js"></script>
+<script type="text/javascript">
+(function($) {
+	$.init();
+	
+	//日期选择器
+    var dtps  = $('.dtp');
+    var dtp2s  = $('.dtp2');
+	dtps.each(function(i, dtp) {
+		dtp.addEventListener('tap', function() {
+			var optionsJson = this.getAttribute('data-options') || '{}';
+			var options = JSON.parse(optionsJson);
+			var id = this.getAttribute('id');
+			var picker = new $.DtPicker(options);
+			picker.show(function(rs) {
+                dtp.innerText = rs.value;
+				dtp.value = rs.value;
+				picker.dispose();
+			});
+		}, false);
+	});
+	
+	dtp2s.each(function(i, dtp) {
+		dtp.addEventListener('tap', function() {
+			var optionsJson = this.getAttribute('data-options') || '{}';
+			var options = JSON.parse(optionsJson);
+			var id = this.getAttribute('id');
+			var picker = new $.DtPicker(options);
+			picker.show(function(rs) {
+                dtp.innerText = rs.value;
+				dtp.value = rs.value;
+				picker.dispose();
+			});
+		}, false);
+	});
+})(mui); 
+
+$(function(){
+	//催收方式置灰
+	if($('#collectionModes').attr('disabled') == 'disabled'){
+		$('#collectionModes').css('color','#CCCCCC');
+	}
+	
+	//催收对象种类
+	$('#collectionTypes').change(function(){
+		if($(this).val() === '1'){
+			$.ajax({
+                url: 'json/phone.json',
+                type: 'get',
+                dataType:'json',
+                success: function(data) {
+                    if(data){
+                    	var newJson = data.data;
+                    	$('#collectionName').val(newJson.collectionName);
+                    	$('#endCall').val(newJson.toPhone);
+                    }
+                },
+                error: function(){
+                	mui.alert('请求错误','消息提示', '确定', function(){
+                		hideLoading();
+                	});
+                }
+            });
+			$('#collectionName').prop('disabled', true );
+		}
+		else if($(this).val() === '2'){
+			$('#collectionName').val('');
+			$('#endCall').val('');
+			$('#collectionName').prop('disabled', true );
+		}
+		else{
+			$('#collectionName').val('');
+			$('#endCall').val('');
+			$('#collectionName').prop('disabled', false );
+		}
+	});
+	
+	
+	//此次催收结果
+	$('#collectionResult').change(function(){
+		if($(this).val() === '1' || $(this).val() === '2' || $(this).val() === '3'){
+			$('#loansIntos').addClass('loansInto mandatory');
+			$('#isCash').addClass('mandatory');
+			$('#borrowerClass').addClass('mandatory');
+			$('textarea').addClass('mandatory');
+		}
+		else{
+			$('#loansIntos').removeClass('mandatory');
+			$('#isCash').removeClass('mandatory');
+			$('#borrowerClass').removeClass('mandatory');
+			$('textarea').removeClass('mandatory');
+		}
+	});
+
+    //表单提交
+    	var mobilePattern       = /^1[34578]\d{9}$/;                 //去电号码验证
+    	var repayAmountPattern  =/^(([1-9]\d*)|\d)(\.\d{1,2})?$/;   //有效金额验证
+    
+        $('#collectionSubmit').click(function(){
+            var data ={
+                collectionModes: $('#collectionModes').find('option:checked').val(),
+                collectionTimes: $('.dtp').val(),
+                collectionPerson:$('#collectionPerson').val(),
+                collectionResult:$('#collectionResult').find('option:checked').val(),
+                callerId:        $('#callerId').val(),
+                collectionTypes: $('#collectionTypes').find('option:checked').val(),
+                collectionName:  $('#collectionName').val(),
+                endCall:         $('#endCall').val(),
+                promRepayDate:   $('.dtp2').val(),
+                repayAmount:     $('#repayAmount').val(),
+                loansInto:       $('.loansInto').val(),
+                isCash:          $('#isCash').find('option:checked').val(),
+                borrowerClass:   $('#borrowerClass').find('option:checked').val(),
+                collectionContent:$('#collectionContent').html(),
+                loanRecent:      $('#loanRecent').html(),
+                clue:            $('#clue').html(),                            
+                nextStep:        $('#nextStep').html(),                       
+                remarks:   		 $('#remarks').html()                       
+            };
+
+			if(data.collectionTimes.length == 0){
+				mui.alert('催收时间不能为空');
+				return false;
+			}
+			else if(data.collectionPerson.length == 0 ){
+				mui.alert('催收人不能为空');
+				return false;
+			} 
+			else if($('#collectionResult').find('option:checked').val() == "0" ){
+				mui.alert('此次催收结果请至少选择一项');
+				return false;
+			}
+			else if ($.trim(data.callerId).length == 0) {
+			  	mui.alert('去电号码不能为空');
+			  	return false;
+			} 
+			else if(!mobilePattern.test( data.callerId ) ) {
+			    mui.alert('请按照座机:区号-号码;手机：11位号码的规则填写');
+			    return false;
+			}
+			else if($('#collectionTypes').find('option:checked').val() == "0" ){
+				mui.alert('催收对象种类请至少选择一项');
+				return false;
+			}
+			else if( $('#collectionName').prop('disabled') == false && data.collectionName.length == 0 ){  
+				mui.alert('催收对象姓名不能为空');
+				return false;
+			}
+			else if ($.trim(data.endCall).length == 0) {
+			  	mui.alert('对方号码不能为空');
+			  	return false;
+			} 
+			else if(!mobilePattern.test( data.endCall ) ) {
+			    mui.alert('请按照座机:区号-号码;手机：11位号码的规则填写');
+			    return false;
+			}
+			else if( $('#loansIntos').hasClass('mandatory') && data.loansInto.length == 0 ){
+				mui.alert('贷款实际投向不能为空');
+				return false;
+			}
+			else if(repayAmountPattern.test(data.repayAmount)==false){
+		        mui.alert("承诺还款金额请输入有效金额");
+		        return false;
+		   }
+			else if( $('#isCash').hasClass('mandatory') && $('#isCash').find('option:checked').val() == "0" ){
+				mui.alert('上期承诺是否兑现请至少选择一项');
+				return false;
+			}
+			else if( $('#borrowerClass').hasClass('mandatory') && $('#borrowerClass').find('option:checked').val() == "0" ){
+				mui.alert('判断借款人分类请至少选择一项');
+				return false;
+			}
+			else if( $('textarea').hasClass('mandatory') && $('textarea').html() == "" ){
+				mui.alert('内容不能为空');
+				return false;
+			}
+            else{
+				sumbitAjax(data);
+			}
+      });
+        
+        function sumbitAjax(data){
+        	showLoading();
+          	$.ajax({
+                url: 'json/test.json',
+                type: 'post',
+                dataType:'json',
+                data: data,
+                success: function(data) {
+                	hideLoading();
+                    if(data.result == '1'){
+                    	mui.alert('提交成功！');
+                    }
+                },
+                error: function(){
+                	mui.alert('请求错误','消息提示', '确定', function(){
+                		hideLoading();
+                	});
+                }
+            });
+        }
+});
+</script>
+</body>
+</html>

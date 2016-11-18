@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>基本信息</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet"/>
+    <link href="css/collection.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="mui-content">
+	<input type="hidden" class="urlId" value="" />
+    <form class="mui-input-group" id="collectionForm">
+                 <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>客户名称:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="customerName" class="txr" name="customerName" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>合同编号:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="contractNum" class="txr" name="contractNum" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>产品类型:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="productName" class="txr" name="productName" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>合同金额:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="contractAmt" class="txr" name="contractAmt" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>合同期限(单位/月):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="contractTerm" class="txr" name="contractTerm" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>合同余额:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="contractBalance" class="txr" name="contractBalance" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>贷款利率(%):</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="loanRate" class="txr" name="loanRate" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>担保方式:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="guaranteeMode" class="txr" name="guaranteeMode" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>还款方式:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="repayingMode" class="txr" name="repayingMode" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>贷款发放日:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="payLoanDate" class="txr" name="payLoanDate" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>逾期天数:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="overdueDays" class="txr" name="overdueDays" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+    		     <div class="mui-input-row">
+    		         <div class="mui-cell-hd">
+                         <label>风险分类:</label>
+                     </div>
+                     <div class="mui-cell-bd">
+                         <input type="text" id="riskTypeCd" class="txr" name="riskTypeCd" value="" placeholder="" readonly="readonly" />
+                     </div>
+    		     </div>
+		 </form>
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.getUrlParam = function(name){
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r!=null) return unescape(r[2]); return null;
+	}
+})(jQuery);
+$(function(){
+	$('.urlId').val($.getUrlParam('id'));
+	var urlId = $('.urlId').val();
+	
+	var $customerName    = $('#customerName'),                     //客户名称
+		$contractNum     = $('#contractNum'),                     //合同编号
+		$productName     = $('#productName'),                    //产品类型
+		$contractAmt     = $('#contractAmt'),                   //合同金额
+		$contractTerm    = $('#contractTerm'),                 //合同期限
+		$contractBalance = $('#contractBalance'),             //合同余额
+		$loanRate        = $('#loanRate'),                   //贷款利率
+		$guaranteeMode   = $('#guaranteeMode'),             //担保方式
+		$repayingMode    = $('#repayingMode'),             //还款方式
+		$payLoanDate     = $('#payLoanDate'),             //贷款发放日
+		$overdueDays     = $('#overdueDays'),            //逾期天数
+		$riskTypeCd      = $('#riskTypeCd');            //风险分类
+	
+	$.ajax({
+        type: 'GET',
+        url: 'json/tag.json',
+        cache:false,
+        dataType: 'json',
+        success: function (data){
+            if (data) {
+            	var newJson = data.aaData;
+                $.each(newJson, function (i,item) {
+                	var guaranteeMode = newJson[i].guaranteeMode;
+                	switch (guaranteeMode) {
+		                case '4':  guaranteeMode = '保险';break;
+		            }
+                	var riskTypeCd    = newJson[i].riskTypeCd;
+                	switch (riskTypeCd) {
+		                case '8':  riskTypeCd = '损失'; break;
+		            }
+                	
+                	if( urlId != '' && urlId == newJson[i].id ){
+                		$customerName.val(newJson[i].customerName);
+                		$contractNum.val(newJson[i].contractNum);
+                		$productName.val(newJson[i].productName);
+                		$contractAmt.val(newJson[i].contractAmt);
+                		$contractTerm.val(newJson[i].contractTerm);
+                		$contractBalance.val(newJson[i].contractBalance);
+                		$loanRate.val(newJson[i].loanRate);
+                		$guaranteeMode.val(guaranteeMode);
+                		$repayingMode.val(newJson[i].repayingMode);
+                		$payLoanDate.val(newJson[i].payLoanDate);
+                	    $overdueDays.val(newJson[i].overdueDays);
+                	    $riskTypeCd.val(riskTypeCd);
+                	}
+                });
+            }
+        },
+        error: function(){
+        	mui.alert('请求错误','消息提示', '确定', function(){
+               hideLoading();
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>

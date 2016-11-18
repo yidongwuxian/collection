@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>选择</title>
+    <link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+	<link href="css/zTreeStyle/outlook.css" rel="stylesheet" />
+    <style>
+    body{ font-size:14px !important; }	
+	input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{ font-size:14px !important; }	
+	.tfr{ float:right; max-width: 60%;}
+	.mui-slider-handle span:first-child{ color:#000; }
+	</style>
+</head>
+<body>
+<ul id="invest_to" class="ztree"></ul>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/ztree/jquery.ztree.core.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+var setting = {
+    view: {
+        showLine: false,
+        showIcon: false,
+        selectedMulti: false,
+        dblClickExpand: false,
+        addDiyDom:   addDiyDom
+    },
+    edit: {
+        enable: true
+    },
+    data: {
+    	key:{
+    		name: "industryTypeName"
+    	},
+        simpleData: {
+            enable: true,
+            idKey: "industryTypeCd",
+			pIdKey: "parentIndustryTypeCd",
+			rootPId: 0
+        }
+    }
+};
+
+function addDiyDom(treeId, treeNode) {
+		console.log(treeNode);
+        var spaceWidth = 6;
+        var switchObj = $("#" + treeNode.tId + "_switch"),
+            icoObj = $("#" + treeNode.tId + "_ico");
+
+        icoObj.before(switchObj);
+
+        if (treeNode.level > 0) {
+            var spaceStr = "<span style='display: inline-block;width:" + (spaceWidth * treeNode.level * 4)+ "px'></span>";
+            switchObj.before(spaceStr);
+        }
+        
+        $("#" + treeNode.tId + "_a").click(function(){
+        	
+	    	var hiddenTreeVal = $(this).text();
+	    	//window.location.href = "phoneCollection.html";
+	    })
+
+};
+
+$(function(){
+	var treeObj = $("#invest_to");
+        treeObj.addClass("showIcon");
+        var zNodes = null;
+        $.ajax({
+            type: "GET",
+            url: "json/getAllIndustry.json",
+            dataType: "json",
+            success: function (res) { 
+                zNodes = res;
+                $.fn.zTree.init(treeObj, setting, zNodes);
+            }
+    	});
+    	
+  
+   
+    
+});
+</script>
+</body>
+</html>
