@@ -50,7 +50,7 @@
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script type="text/javascript"> 
-$(function(){
+$(function(){ 
 	var $searchBar    = $('#searchBar'),
 	    $searchResult = $('#searchResult'),
 	    $searchText   = $('#searchText'),
@@ -60,8 +60,8 @@ $(function(){
         $smarkBox     = $('.smarkBox'),
         $nodata       = $('.nodata'),
     	winH          = $(window).height(), 
-    	page          = 1,
-    	gPageSize     = 4;
+    	page          = 1;                       //当前页数
+    	//gPageSize     = 4;                       //每页个数
 	    
 	 	function hideSearchResult(){
 	 		$searchResult.hide();
@@ -110,50 +110,63 @@ $(function(){
 		iScrollFn();
         
         $searchBtn.on('click', function(){
-      		 $searchResult.show();
-    		 if( $searchInput.val() != "" ) {  
-                dataAjax(1);       
-             }  
+		  if( $searchInput.val() != "" ) {  
+            dataAjax(1);  
+          }  
         });
         	
-        function dataAjax(pagenumber){     	
+        function dataAjax(pagenumber){   
+        	var searchText = $searchInput.val();
         	$.ajax({
                 type: 'GET',
                 url: 'json/tag.json',
                 cache:false,
-                data: "keyword=" + $searchInput.val()+"&pagesize="+ gPageSize +"&pagenumber="+ pagenumber,
+                data: "keyword=" + $searchInput.val()+ "&pagenumber=" + pagenumber,
                 dataType: 'json',
                 success: function (json){
                 	$(".loadingPic").hide();
-                    if (json && (gPageSize * pagenumber) < json.iTotalRecords) {
-                    	$(".loadingPic").show();
-                    	var newJson = json.aaData;
-                        var	lists = "<ul class='mui-table-view'>";
-                        $.each(newJson, function (i,item) {
-                          	lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
-                            		"<div class='mui-slider-handle'>" +
-                            			"<p><span class='mui-color-blue'>合同编号:</span>" +
-                            			"<span>"+ item.contractNum +"</span></p>" +
-                            			"<p><span class='mui-color-blue'>客户编号:</span>" +
-                            			"<span>"+ item.customerNum +"</span></p>" +
-                            			"<p><span class='mui-color-blue'>客户名称:</span>" +
-                            			"<span>"+ item.customerName +"</span></p>" +
-                            			"<p><span class='mui-color-blue'>产品类型:</span>" +
-                            			"<span>"+ item.productName +"</span></p>" +
-                            		"</div>" +
-                             "</li>";
-                        });
-                        lists +="</ul>";
-                        $('#searchResult').html(lists);	
-                        page++;
-                        if($('#searchResult li').length != '0'){
-			    			popupSmartBox();
-			    		}
-                    }else{
-                    	$(".loadingPic").hide();
-                    	$('.nodata').show();
-                    	return false;
+                    if (json) {
+                    	if((json.gPageSize * pagenumber) < json.iTotalRecords){
+	                    	$(".loadingPic").show();
+	                    	var newJson = json.aaData;
+	                    	if($searchInput.val() != ""){
+	                    		var	lists = "<ul class='mui-table-view'>";
+			                        $.each(newJson, function (i,item) {
+			                        	if(item.departmentName.indexOf(searchText)!=-1){
+				                          	lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
+				                            		"<div class='mui-slider-handle'>" +
+				                            			"<p><span class='mui-color-blue'>合同编号:</span>" +
+				                            			"<span>"+ item.contractNum +"</span></p>" +
+				                            			"<p><span class='mui-color-blue'>客户编号:</span>" +
+				                            			"<span>"+ item.customerNum +"</span></p>" +
+				                            			"<p><span class='mui-color-blue'>客户名称:</span>" +
+				                            			"<span>"+ item.customerName +"</span></p>" +
+				                            			"<p><span class='mui-color-blue'>产品类型:</span>" +
+				                            			"<span>"+ item.productName +"</span></p>" +
+				                            		"</div>" +
+				                             "</li>"; 
+			                            }
+			                        	
+			                        });
+		                        	lists +="</ul>";
+		                        	$('#searchResult').html(lists).show();	
+		                    
+	                    	}else{
+	                    		$('#searchResult').html('').hide();	
+	                    		$(".loadingPic").hide();
+	                    	}
+	                    	page++;
+	                        if($('#searchResult li').length != '0'){
+				    			popupSmartBox();
+				    		}
+	                    }
+                    	else{
+	                    	$(".loadingPic").hide();
+	                    	$('.nodata').show();
+	                    	return false;
+	                    }
                     }
+                   
                 },
                 beforeSend: function(){
                 	$(".loadingPic").show();
@@ -162,6 +175,7 @@ $(function(){
                 	$(".loadingPic").hide();
                 }
             });
+        	pagenumber++;
         }
         	
        	function hideLoadingPic(){
