@@ -40,12 +40,9 @@
 			<a class='mui-btn mui-btn-grey mui-icon mui-icon-email smarkLnk'></a>
 	    </div>
 	    <div class="loadingPic">
-            <i class="loading"></i>
-            <span class="loadmore__tips">正在加载</span>
-        </div>
-	    <div class="nodata loadmore_line">
-	    	<span class="loadmore__tips">没有更多数据了</span>
-	    </div>
+	    	<div class="loadmore_line"></div>
+            <span class="loadmore__tips"></span>
+       </div>
 	</div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/mui.min.js"></script>
@@ -58,10 +55,34 @@ $(function(){
         $searchClear  = $('#searchClear'),
         $searchBtn    = $('#searchBtn'),
         $smarkBox     = $('.smarkBox'),
-        $nodata       = $('.nodata'),
+        $loadingPic   = $('.loadingPic'),
     	winH          = $(window).height(), 
     	page          = 1;                       //当前页数
-    	//gPageSize     = 4;                       //每页个数
+    	//gPageSize     = 4;                     //每页个数
+    	
+    	
+    
+    	//正在加载
+    	function loadingFx(){
+    		$('.loadmore_line').hide();
+	    	$('.loadmore__tips').html('<i class="loading"></i>正在加载');
+        	$loadingPic.show();
+    	}
+	    
+	    //没有更多数据了
+	    function loaded(){
+    		$('.loadmore_line').show();
+	    	$('.loadmore__tips').html('没有更多数据了');
+        	$loadingPic.show();
+    	}
+	    
+	    //清空加载loading
+	    function hideLoadingFx(){
+	    	$('.loadmore__tips').html('');
+        	$loadingPic.hide();
+    	}
+	    
+	    
 	    
 	 	function hideSearchResult(){
 	 		$searchResult.hide();
@@ -83,7 +104,7 @@ $(function(){
 
         $searchClear.on('click', function(){
         	$smarkBox.hide();
-        	$nodata.hide();
+        	hideLoadingFx();
             hideSearchResult();
             $searchInput.focus();
         });
@@ -108,9 +129,11 @@ $(function(){
         }
 
 		iScrollFn();
+        hideLoadingFx();
         
         $searchBtn.on('click', function(){
-		  if( $searchInput.val() != "" ) {  
+		  if( $searchInput.val() != "" ) { 
+		  	loadingFx();
             dataAjax(1);  
           }  
         });
@@ -124,10 +147,10 @@ $(function(){
                 data: "keyword=" + $searchInput.val()+ "&pagenumber=" + pagenumber,
                 dataType: 'json',
                 success: function (json){
-                	$(".loadingPic").hide();
+                	hideLoadingFx();
                     if (json) {
                     	if((json.gPageSize * pagenumber) < json.iTotalRecords){
-	                    	$(".loadingPic").show();
+	                    	loadingFx();	                    	
 	                    	var newJson = json.aaData;
 	                    	if($searchInput.val() != ""){
 	                    		var	lists = "<ul class='mui-table-view'>";
@@ -145,6 +168,10 @@ $(function(){
 				                            			"<span>"+ item.productName +"</span></p>" +
 				                            		"</div>" +
 				                             "</li>"; 
+			                           }else{
+			                            	$('#searchResult').hide();
+			                            	$('.loadmore_line').show();
+	    									$('.loadmore__tips').html('请输入有效的关键词搜索');
 			                            }
 			                        	
 			                        });
@@ -152,8 +179,8 @@ $(function(){
 		                        	$('#searchResult').html(lists).show();	
 		                    
 	                    	}else{
-	                    		$('#searchResult').html('').hide();	
-	                    		$(".loadingPic").hide();
+	                    		$('#searchResult').html('').hide();
+	                    		hideLoadingFx();
 	                    	}
 	                    	page++;
 	                        if($('#searchResult li').length != '0'){
@@ -161,33 +188,21 @@ $(function(){
 				    		}
 	                    }
                     	else{
-	                    	$(".loadingPic").hide();
-	                    	$('.nodata').show();
+                    		loaded();
 	                    	return false;
 	                    }
-                    }
-                   
+                    }                 
                 },
                 beforeSend: function(){
-                	$(".loadingPic").show();
+                	//loadingFx();
                 },
                 error: function(){
-                	$(".loadingPic").hide();
+                	hideLoadingFx();
                 }
             });
         	pagenumber++;
         }
         	
-       	function hideLoadingPic(){
-       		$(".loadingPic").hide();
-       		if($(".loadingPic").is(":visible") ==false){
-       			showNodata();
-       		}
-       	}
-       	
-       	function showNodata(){
-       		$('.nodata').show();
-       	}
         	
     	//点击其中li,弹出相应操作按钮
 		function popupSmartBox(){
