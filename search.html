@@ -46,8 +46,8 @@
 	</div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/mui.min.js"></script>
-<script type="text/javascript"> 
-$(function(){ 
+<script type="text/javascript">
+$(function(){
 	var $searchBar    = $('#searchBar'),
 	    $searchResult = $('#searchResult'),
 	    $searchText   = $('#searchText'),
@@ -56,34 +56,34 @@ $(function(){
         $searchBtn    = $('#searchBtn'),
         $smarkBox     = $('.smarkBox'),
         $loadingPic   = $('.loadingPic'),
-    	winH          = $(window).height(), 
+    	winH          = $(window).height(),
     	page          = 1;                       //当前页数
     	//gPageSize     = 4;                     //每页个数
-    	
-    	
-    
+
+
+
     	//正在加载
     	function loadingFx(){
     		$('.loadmore_line').hide();
 	    	$('.loadmore__tips').html('<i class="loading"></i>正在加载');
         	$loadingPic.show();
     	}
-	    
+
 	    //没有更多数据了
 	    function loaded(){
     		$('.loadmore_line').show();
 	    	$('.loadmore__tips').html('没有更多数据了');
         	$loadingPic.show();
     	}
-	    
+
 	    //清空加载loading
 	    function hideLoadingFx(){
 	    	$('.loadmore__tips').html('');
         	$loadingPic.hide();
     	}
-	    
-	    
-	    
+
+
+
 	 	function hideSearchResult(){
 	 		$searchResult.hide();
             $searchInput.val('');
@@ -108,12 +108,12 @@ $(function(){
             hideSearchResult();
             $searchInput.focus();
         });
-        
-        
+
+
         function iScrollFn(){
-        	$(window).scroll(function(){  
-    			var pageH = $(document.body).height();  
-        		var scrollT = $(window).scrollTop(); 
+        	$(window).scroll(function(){
+    			var pageH = $(document.body).height();
+        		var scrollT = $(window).scrollTop();
         		var diffY = (pageH - winH - scrollT) / winH;
 				if (diffY < 0.02) {
 					dataAjax(page);
@@ -130,15 +130,21 @@ $(function(){
 
 		iScrollFn();
         hideLoadingFx();
-        
+
         $searchBtn.on('click', function(){
-		  if( $searchInput.val() != "" ) { 
-		  	loadingFx();
-            dataAjax(1);  
-          }  
+            if($searchInput.val() != ""){
+                $('#searchResult').html('');
+    		  	loadingFx();
+                dataAjax(1);
+            }else{
+                $('#searchResult').html('').hide();
+                hideLoadingFx();
+            }
         });
-        	
-        function dataAjax(pagenumber){   
+
+        dataAjax(0);
+
+        function dataAjax(pagenumber){
         	var searchText = $searchInput.val();
         	$.ajax({
                 type: 'GET',
@@ -149,13 +155,12 @@ $(function(){
                 success: function (json){
                 	hideLoadingFx();
                     if (json) {
-                    	if((json.gPageSize * pagenumber) < json.iTotalRecords){
-	                    	loadingFx();	                    	
+                    	if((json.gPageSize * pagenumber) < json.iTotalRecords){                                                       //循环没有达到最后一页
+	                    	//loadingFx();
 	                    	var newJson = json.aaData;
-	                    	if($searchInput.val() != ""){
-	                    		var	lists = "<ul class='mui-table-view'>";
+	                    	var	lists = "<ul class='mui-table-view'>";
 			                        $.each(newJson, function (i,item) {
-			                        	if(item.departmentName.indexOf(searchText)!=-1){
+			                        	if(item.customerName.indexOf(searchText)!=-1){                                             //输入正确的关键词查询
 				                          	lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
 				                            		"<div class='mui-slider-handle'>" +
 				                            			"<p><span class='mui-color-blue'>合同编号:</span>" +
@@ -167,31 +172,41 @@ $(function(){
 				                            			"<p><span class='mui-color-blue'>产品类型:</span>" +
 				                            			"<span>"+ item.productName +"</span></p>" +
 				                            		"</div>" +
-				                             "</li>"; 
-			                           }else{
+				                             "</li>";
+			                           }
+                                       if(item.customerName.indexOf(searchText)==-1){                                                                                            //输入错误的关键词查询
 			                            	$('#searchResult').hide();
 			                            	$('.loadmore_line').show();
 	    									$('.loadmore__tips').html('请输入有效的关键词搜索');
+                                            $loadingPic.show();
 			                            }
-			                        	
+                                        if(pagenumber == 0){
+                                            lists += "<li class='mui-table-view-cell' data-id='"+item.id+"'>" +
+                                                    "<div class='mui-slider-handle'>" +
+                                                        "<p><span class='mui-color-blue'>合同编号:</span>" +
+                                                        "<span>"+ item.contractNum +"</span></p>" +
+                                                        "<p><span class='mui-color-blue'>客户编号:</span>" +
+                                                        "<span>"+ item.customerNum +"</span></p>" +
+                                                        "<p><span class='mui-color-blue'>客户名称:</span>" +
+                                                        "<span>"+ item.customerName +"</span></p>" +
+                                                        "<p><span class='mui-color-blue'>产品类型:</span>" +
+                                                        "<span>"+ item.productName +"</span></p>" +
+                                                    "</div>" +
+                                             "</li>";
+                                        }
 			                        });
 		                        	lists +="</ul>";
-		                        	$('#searchResult').html(lists).show();	
-		                    
-	                    	}else{
-	                    		$('#searchResult').html('').hide();
-	                    		hideLoadingFx();
-	                    	}
-	                    	page++;
-	                        if($('#searchResult li').length != '0'){
-				    			popupSmartBox();
-				    		}
+		                        	$('#searchResult').html(lists).show();
+        	                    	page++;
+        	                        if($('#searchResult li').length != '0'){                                                                 //浮动层出现
+        				    			popupSmartBox();
+        				    		}
 	                    }
-                    	else{
+                    	else{                                                                                                         //没有更多数据了
                     		loaded();
 	                    	return false;
 	                    }
-                    }                 
+                    }
                 },
                 beforeSend: function(){
                 	//loadingFx();
@@ -202,23 +217,23 @@ $(function(){
             });
         	pagenumber++;
         }
-        	
-        	
+
+
     	//点击其中li,弹出相应操作按钮
 		function popupSmartBox(){
 			$('#searchResult li').click(function(e){
 				$(this).css('backgroundColor','#ffffff').siblings().css('backgroundColor','#f8f8f8');
 				var dataId = $(this).attr("data-id");
 				$(this).parents().parents().find('.mui-icon-paperclip.smarkLnk').attr('href','baseInfo.html?id='+dataId+'');
-				$(this).parents().parents().find('.mui-icon-info.smarkLnk').attr('href','defaultInfo.html?id='+dataId+'');				
+				$(this).parents().parents().find('.mui-icon-info.smarkLnk').attr('href','defaultInfo.html?id='+dataId+'');
 				$(this).parents().parents().find('.mui-icon-plus.smarkLnk').attr('href','histroyInfo.html?id='+dataId+'');
 				$(this).parents().parents().find('.mui-icon-phone.smarkLnk').attr('href','phoneCollection.html?id='+dataId+'');
-				$(this).parents().parents().find('.mui-icon-compose.smarkLnk').attr('href','interviewCollection.html?id='+dataId+'');				
-				$(this).parents().parents().find('.mui-icon-email.smarkLnk').attr('href','lettersCollection.html?id='+dataId+'');	
+				$(this).parents().parents().find('.mui-icon-compose.smarkLnk').attr('href','interviewCollection.html?id='+dataId+'');
+				$(this).parents().parents().find('.mui-icon-email.smarkLnk').attr('href','lettersCollection.html?id='+dataId+'');
 				$(this).parents().parents().find('.smarkBox').show();
 			});
 		}
-    			 
+
 })
 </script>
 </body>
